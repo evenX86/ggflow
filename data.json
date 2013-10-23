@@ -1,0 +1,19 @@
+{"nodes":[
+    {"name":"0"},
+    {"name":"1"},
+    {"name":"2"},
+    {"name":"3"},
+    {"name":"4"},
+    {"name":"5"},
+    {"name":"6"}
+
+],
+    "links":[
+        {"source":0,"target":1,"value":5500},
+        {"source":1,"target":2,"value":2810},
+        {"source":2,"target":3,"value":1010},
+        {"source":1,"target":4,"value":510},
+        {"source":4,"target":3,"value":210},
+        {"source":3,"target":5,"value":210},
+        {"source":5,"target":6,"value":110}
+    ]}
