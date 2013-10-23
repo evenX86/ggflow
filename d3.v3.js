@@ -5111,7 +5111,7 @@ d3 = function() {
   }
   d3.interpolateNumber = d3_interpolateNumber;
   function d3_interpolateNumber(a, b) {
-    b -= a = +a;
+    b -= a ;    /*wtf*/
     return function(t) {
       return a + b * t;
     };

@@ -8,13 +8,13 @@ d3.sankey = function() {
 
   sankey.nodeWidth = function(_) {
     if (!arguments.length) {return nodeWidth;}
-    nodeWidth = +_;
+    nodeWidth = _;
     return sankey;
   };
 
   sankey.nodePadding = function(_) {
-    if (!arguments.length) return nodePadding;
-    nodePadding = +_;
+    if (!arguments.length) {return nodePadding};
+    nodePadding = _;    //原来多了个+是神马意思!去掉了
     return sankey;
   };
 
@@ -53,15 +53,15 @@ d3.sankey = function() {
   sankey.link = function() {
     var curvature = .5;
 
-    /**这里要固定node的位置,使得link的宽度固定为96px左右
-     * gg在link的参数有MLC，应该是曲线的曲的程度加上了L
+    /** 这里要固定node的位置,使得link的宽度固定为96px左右
+     *  gg在link的参数有MLC，应该是曲线的曲的程度加上了L
      *
      * */
 
     function link(d) {
       var x0 = d.source.x + d.source.dx,
-          x1 = d.target.x,
-          xi = d3.interpolateNumber(x0, x1),
+          x1 = d.target.x,      //x1是下一个node的x坐标
+          xi = d3.interpolateNumber(x0, x1),//传进闭包,计算link的坐标值
           x2 = xi(curvature),
           x3 = xi(1 - curvature),
           y0 = d.source.y + d.sy + d.dy / 2,
@@ -123,7 +123,6 @@ d3.sankey = function() {
       remainingNodes.forEach(function(node) {
         node.x = x;
         node.dx = nodeWidth;
-
         node.sourceLinks.forEach(function(link) {
           nextNodes.push(link.target);
         });
@@ -133,9 +132,12 @@ d3.sankey = function() {
     }
 
   //  moveSinksRight(x);  删掉这里是为了把一次访问放在同一列里而不是把没有outgoing的设置为最大宽度。
-    scaleNodeBreadths((width - nodeWidth) / (x - 1));
+       scaleNodeBreadths((width - nodeWidth) / (x + 10));  /*设置不同列之间的node的距离*/
   }
 
+    /**
+     *  一个没有用到的函数.
+     */
   function moveSourcesRight() {
     nodes.forEach(function(node) {
       if (!node.targetLinks.length) {
@@ -152,6 +154,9 @@ d3.sankey = function() {
     });
   }
 
+    /**
+     * 设置行与行之间的距离
+     * */
   function scaleNodeBreadths(kx) {
     nodes.forEach(function(node) {
       node.x *= kx;
