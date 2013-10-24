@@ -41,23 +41,27 @@ d3.sankey = function() {
     computeNodeValues();
     computeNodeBreadths();
     computeNodeDepths(iterations);
-    computeLinkDepths();
+    computeLinkDepths();    //计算线路depth，应该就是画线的
+    highlight();
     return sankey;
   };
 
+    /**
+     * 重新画，经测试貌似没有明显效果啊
+     * @returns {{}}
+     */
   sankey.relayout = function() {
     computeLinkDepths();
     return sankey;
   };
 
-  sankey.link = function() {
-    var curvature = .5;
 
     /** 这里要固定node的位置,使得link的宽度固定为96px左右
      *  gg在link的参数有MLC，应该是曲线的曲的程度加上了L
      *
      * */
-
+  sankey.link = function() {
+    var curvature = .5;
     function link(d) {
       var x0 = d.source.x + d.source.dx,
           x1 = d.target.x,      //x1是下一个node的x坐标
@@ -81,7 +85,7 @@ d3.sankey = function() {
     return link;
   };
 
-  // Populate the sourceLinks and targetLinks for each node.
+  // Populate the sourceLinks and targetLinks for each node. 为每个节点连上线,是否可以在这里下手,使高亮
   // Also, if the source and target are not objects, assume they are indices.
   function computeNodeLinks() {
     nodes.forEach(function(node) {
@@ -132,9 +136,18 @@ d3.sankey = function() {
     }
 
   //  moveSinksRight(x);  删掉这里是为了把一次访问放在同一列里而不是把没有outgoing的设置为最大宽度。
-       scaleNodeBreadths((width - nodeWidth) / (x + 10));  /*设置不同列之间的node的距离*/
+       scaleNodeBreadths((width - nodeWidth) / (x + 7.5));  /*设置不同列之间的node的距离*/
   }
 
+    /***
+     * 高亮显示流经过某处的流量
+     */
+    function highlight() {
+        console.log("!");
+        nodes[0].onclick= function () {
+            console.log(nodes);
+        }
+    }
     /**
      *  一个没有用到的函数.
      */
