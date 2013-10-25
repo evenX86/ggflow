@@ -180,8 +180,16 @@
         fill-opacity:0.8;
         stroke-width:0.8px;
         cursor:point;
+        display:none;
+    }
+    .link2 {
+        fill:#88a4a4;
+        stroke:#88a4a4;
+        fill-opacity:1;
+        stroke-width:1px;
+        cursor:point;
     }
 
     .link:hover {
-        stroke-opacity: .5;
+        stroke-opacity: 1;
     }

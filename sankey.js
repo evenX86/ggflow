@@ -134,19 +134,18 @@ d3.sankey = function() {
       remainingNodes = nextNodes;
       ++x;
     }
-
-  //  moveSinksRight(x);  删掉这里是为了把一次访问放在同一列里而不是把没有outgoing的设置为最大宽度。
+  //   moveSinksRight(x);  删掉这里是为了把一次访问放在同一列里而不是把没有outgoing的设置为最大宽度。
        scaleNodeBreadths((width - nodeWidth) / (x + 7.5));  /*设置不同列之间的node的距离*/
   }
 
-    /***
+    /**
      * 高亮显示流经过某处的流量
      */
     function highlight() {
-        console.log("!");
-        nodes[0].onclick= function () {
-            console.log(nodes);
-        }
+        nodes.forEach(function (node) {
+            node.onclick = function () {
+            }
+        });
     }
     /**
      *  一个没有用到的函数.

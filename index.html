@@ -86,6 +86,9 @@
 
     var path = sankey.link();
 
+    var oldClass = "link";  //原来的class,点击之后变为新的class
+    var newClass = "link2";
+
 
 
     d3.json("data.json", function(energy) {
@@ -93,15 +96,52 @@
         sankey
                 .nodes(energy.nodes)
                 .links(energy.links)
-                .layout(0);
+                .layout(0);         //layout里的参数表示什么意思啊
 
         var link = svg.append("g").selectAll(".link")
                 .data(energy.links)
                 .enter().append("path")
                 .attr("class", "link")
+                .attr("style","display:block")
                 .attr("d", path)
                 .style("stroke-width", function(d) { return Math.max(1, d.dy); })
-                .sort(function(a, b) { return b.dy - a.dy; });
+                .sort(function(a, b) { return b.dy - a.dy; })
+                ;
+
+        /**
+         * 设置鼠标点击事件,高亮显示流经某处的流量（好吧,这只是目标）
+         * 现在....
+         * */
+
+        function generateArr() {
+            var a = [0,1,3,4,5,6,7,8];
+            return  a;
+        }
+
+     //   console.log(link[0][0].__data__.source.sourceLinks);
+        var a = []; //需要高亮的路径,存放数组
+        var point = 0;  //点击某个point之后动态生成a数组
+
+
+        for(var i = 0; i< link[0].length; i++ ) {
+        var k=0;
+        link[0][i].onclick = function (){   /*现在存在问题是点击之后返回当前点击的是哪个link*/
+            console.log(link[0].length);
+            a = generateArr();      /*点击之后动态生成*/
+            if(link[0][0].className.animVal===oldClass) {
+                for (k = 0;k< a.length;k++) {
+                    link[0][a[k]].className.baseVal=newClass;
+                    link[0][a[k]].className.animVal=newClass;
+                }
+            }
+            else {
+                for (k = 0;k< a.length;k++) {
+                    link[0][a[k]].className.baseVal=oldClass;
+                    link[0][a[k]].className.animVal=oldClass;
+                }
+            }
+        };
+        }
 
         /*显示路径的说明*/
         link.append("title")
@@ -115,7 +155,11 @@
                 .call(d3.behavior.drag()
                         .origin(function(d) { return d; })
                         .on("dragstart", function() { this.parentNode.appendChild(this); })
-                        .on("drag", dragmove));   /*拖动*/
+                        .on("drag", dragmove))
+                ;   /*拖动*/
+
+        var node_temp = svg.append("g").selectAll(".node");
+
 
         node.append("rect")
                 .attr("height", function(d) { return d.dy; })
