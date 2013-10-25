@@ -168,6 +168,10 @@
         var k=0;
         link[0][i].onclick = function (d){   /*现在存在问题是点击之后返回当前点击的是哪个link*/
             a = generateArr(d);      /*点击之后动态生成*/
+            for (var ii=0; ii<link[0].length; ii++) {
+                link[0][ii].className.baseVal=oldClass;
+                link[0][ii].className.animVal=oldClass;
+            }
             if (link[0][a[0]].className.animVal===oldClass) {
                 for (k = 0;k< a.length;k++) {
                     link[0][a[k]].className.baseVal=newClass;
@@ -199,9 +203,8 @@
                 .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"; })
                 .call(d3.behavior.drag()
                         .origin(function(d) { return d; })
-                        .on("dragstart", function() { this.parentNode.appendChild(this); })
-                        .on("drag", dragmove))
-                ;   /*拖动*/
+                        .on("dragstart", function() { this.parentNode.appendChild(this); }));
+                //.on("drag", dragmove)) 设置不能拖动.不然太乱了
 
         var node_temp = svg.append("g").selectAll(".node");
 
