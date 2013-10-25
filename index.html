@@ -120,13 +120,13 @@
 
      //   console.log(link[0][0].__data__.source.sourceLinks);
         var a = []; //需要高亮的路径,存放数组
+        var b = [];
         var point = 0;  //点击某个point之后动态生成a数组
 
-
-        for(var i = 0; i< link[0].length; i++ ) {
+        for (var i = 0; i < link[0].length; i++ ) {
         var k=0;
-        link[0][i].onclick = function (){   /*现在存在问题是点击之后返回当前点击的是哪个link*/
-            console.log(link[0].length);
+        link[0][i].onclick = function (d){   /*现在存在问题是点击之后返回当前点击的是哪个link*/
+            console.log(d.toElement);
             a = generateArr();      /*点击之后动态生成*/
             if(link[0][0].className.animVal===oldClass) {
                 for (k = 0;k< a.length;k++) {
@@ -143,9 +143,17 @@
         };
         }
 
+        link[0][1].onclick = function (d){
+            console.log(d.toElement);
+        }
+
         /*显示路径的说明*/
         link.append("title")
                 .text(function(d) { return d.source.name + " 到 " + d.target.name + "\n" + format(d.value); });
+        /*link加个div标签*/
+        link.append("div")
+                .style(function() {return "background:red"})
+                .text("rrr");
 
         var node = svg.append("g").selectAll(".node")
                 .data(energy.nodes)
