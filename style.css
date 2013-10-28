@@ -7,7 +7,7 @@
 		}
 	div,form {
 		margin:0;
-		padding::0;
+		padding:0;
 		outline-style:none;
 		}
 			
@@ -38,7 +38,7 @@
 	.ds{
 		margin:0;
 		min-height:500px;
-		min-width:%99;
+		min-width: 99%;
 	}
 	.cwb{
 		color:#999;
@@ -192,4 +192,30 @@
 
     .link:hover {
         stroke-opacity: 1;
+    }
+    .node1 {
+        border-color:rgb(209,223,224);
+        fill:rgb(209,223,224);
+
+        background-image:-webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+    }
+    .node2 {
+        border-color: rgb(209, 223, 224);
+        fill:#88a4a4;
+        background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+    }
+    .node1 text {
+        pointer-events: none;
+        text-shadow: 2px 2px 4px #000000;
+        width:187px;
+        font-family:verdana;
+        font-size:30px;
+    }
+    .node2 text {
+        pointer-events: none;
+        text-shadow: 2px 2px 4px #000000;
+        size:30px;
+        width:187px;
+        font-family:verdana;
+        font-size:30px;
     }
