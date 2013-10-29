@@ -21,9 +21,10 @@ var sankey = d3.sankey()
 
 var path = sankey.link();
 
-var oldClass = "link";  //原来的class,点击之后变为新的class
-var newClass = "link2";
-
+var oldLink = "link";  //原来的class,点击之后变为新的class
+var newLink = "link2";
+var oldNode = "node1";
+var newNode = "node2";
 
 
 d3.json("data.json", function(energy) {
@@ -219,39 +220,39 @@ d3.json("data.json", function(energy) {
             a = generateArr(d);      /*点击之后动态生成*/
             b = generateNode(d);
             b = b.unique();
-            if ( link[0][a[0]].className.animVal === oldClass ) {
+            if ( link[0][a[0]].className.animVal === oldLink ) {
                 for ( var ii=0; ii<link[0].length; ii++ ) {
-                    link[0][ii].className.baseVal = oldClass;
-                    link[0][ii].className.animVal = oldClass;
+                    link[0][ii].className.baseVal = oldLink;
+                    link[0][ii].className.animVal = oldLink;
                 }
                 for (var ii = 0; ii < node[0].length; ii++ ) {
-                    node[0][ii].className.animVal = "node1";
-                    node[0][ii].className.baseVal = "node1";
+                    node[0][ii].className.animVal = oldNode;
+                    node[0][ii].className.baseVal = oldNode;
                 }
 
                 for (k = 0;k < a.length; k++) {
-                    link[0][a[k]].className.baseVal=newClass;
-                    link[0][a[k]].className.animVal=newClass;
+                    link[0][a[k]].className.baseVal=newLink;
+                    link[0][a[k]].className.animVal=newLink;
                 }
                 for ( var j = 0; j < b.length; j++ ) {
                     for (var r = 0; r < node[0].length; r++) {
                         if (node[0][r].__data__.name === b[j]) {
-                            node[0][r].className.animVal = "node2";
-                            node[0][r].className.baseVal = "node2";
+                            node[0][r].className.animVal = newNode;
+                            node[0][r].className.baseVal = newNode;
                         }
                     }
                 }
             }
             else {
                 for (k = 0;k< a.length;k++) {
-                    link[0][a[k]].className.baseVal=oldClass;
-                    link[0][a[k]].className.animVal=oldClass;
+                    link[0][a[k]].className.baseVal=oldLink;
+                    link[0][a[k]].className.animVal=oldLink;
                 }
                 for ( var j = 0; j < b.length; j++ ) {
                     for (var r = 0; r < node[0].length; r++) {
                         if (node[0][r].__data__.name === b[j]) {
-                            node[0][r].className.animVal = "node1";
-                            node[0][r].className.baseVal = "node1";
+                            node[0][r].className.animVal = oldNode;
+                            node[0][r].className.baseVal = oldNode;
                         }
                     }
                 }
@@ -259,21 +260,16 @@ d3.json("data.json", function(energy) {
         });
     }
 
-    //  for (var i=0; i<node[0].length;i++) {
-    var a = [];
     node[0][0].addEventListener("click",function (d) {
-        console.log(node[0]);
-        a = generateNode(d);
-        if (node[0][0].className.animVal==="node1") {
-            node[0][0].className.animVal = "node2";
-            node[0][0].className.baseVal = "node2";
+        if (node[0][0].className.animVal===oldNode) {
+            node[0][0].className.animVal = newNode;
+            node[0][0].className.baseVal = newNode;
         }
         else {
-            node[0][0].className.animVal = "node1";
-            node[0][0].className.baseVal = "node1";
+            node[0][0].className.animVal = oldNode;
+            node[0][0].className.baseVal = oldNode;
         }
     });
-    //     }
 
 });
 
