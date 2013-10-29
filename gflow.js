@@ -99,21 +99,27 @@ d3.json("data.json", function(energy) {
      *
      * @param d
      * @returns {Array}
+     * 找出点击link时候需要高亮的节点。
      */
     function generateNode(d) {
-        console.log(d);
         var res = [];
         var b = [];
         for (var i = 0; i<link[0].length;i++) {
             /*寻找源是目标,即找出下一条高亮路劲,不过现在只能找出一条*/
-            if (link[0][i].__data__.source.name===d.srcElement.__data__.target.name)
+            if ( link[0][i].__data__.source.name === d.srcElement.__data__.target.name ) {
+                res.push(d.srcElement.__data__.source.name);
+                res.push(d.srcElement.__data__.target.name);
+                res.push(link[0][i].__data__.target.name);
                 b.push(i);
+            }
+
         }
         /*把去路上的全部高亮了*/
         for (var j =0 ;j < b.length; j++ ) {
             for (var i =0 ;i<link[0].length;i++) {
                 if (link[0][b[j]].__data__.target.name===link[0][i].__data__.source.name)   {
                     res.push(link[0][i].__data__.source.name);
+                    res.push(link[0][i].__data__.target.name);
                     b.push(i);
                 }
             }
@@ -137,7 +143,7 @@ d3.json("data.json", function(energy) {
             if (link[0][i].__data__.target.name === d.srcElement.__data__.source.name) {
                 a.push(i);
                 res.push(link[0][i].__data__.target.name);
-
+                res.push(link[0][i].__data__.source.name);
             }
         }
         for (var j=0; j< a.length; j++) {
@@ -145,13 +151,11 @@ d3.json("data.json", function(energy) {
                 if (link[0][a[j]].__data__.source.name === link[0][i].__data__.target.name) {
                     a.push(i);
                     res.push(link[0][a[j]].__data__.source.name);
+                    res.push(link[0][a[j]].__data__.target.name);
                 }
             }
         }
-        a = a.concat(b);
         return  res;
-
-
     }
 
 
@@ -215,21 +219,41 @@ d3.json("data.json", function(energy) {
             a = generateArr(d);      /*点击之后动态生成*/
             b = generateNode(d);
             b = b.unique();
-            console.log(b);
-            if (link[0][a[0]].className.animVal===oldClass) {
-                for (var ii=0; ii<link[0].length; ii++) {
-                    link[0][ii].className.baseVal=oldClass;
-                    link[0][ii].className.animVal=oldClass;
+            if ( link[0][a[0]].className.animVal === oldClass ) {
+                for ( var ii=0; ii<link[0].length; ii++ ) {
+                    link[0][ii].className.baseVal = oldClass;
+                    link[0][ii].className.animVal = oldClass;
                 }
-                for (k = 0;k< a.length;k++) {
+                for (var ii = 0; ii < node[0].length; ii++ ) {
+                    node[0][ii].className.animVal = "node1";
+                    node[0][ii].className.baseVal = "node1";
+                }
+
+                for (k = 0;k < a.length; k++) {
                     link[0][a[k]].className.baseVal=newClass;
                     link[0][a[k]].className.animVal=newClass;
+                }
+                for ( var j = 0; j < b.length; j++ ) {
+                    for (var r = 0; r < node[0].length; r++) {
+                        if (node[0][r].__data__.name === b[j]) {
+                            node[0][r].className.animVal = "node2";
+                            node[0][r].className.baseVal = "node2";
+                        }
+                    }
                 }
             }
             else {
                 for (k = 0;k< a.length;k++) {
                     link[0][a[k]].className.baseVal=oldClass;
                     link[0][a[k]].className.animVal=oldClass;
+                }
+                for ( var j = 0; j < b.length; j++ ) {
+                    for (var r = 0; r < node[0].length; r++) {
+                        if (node[0][r].__data__.name === b[j]) {
+                            node[0][r].className.animVal = "node1";
+                            node[0][r].className.baseVal = "node1";
+                        }
+                    }
                 }
             }
         });
@@ -238,7 +262,7 @@ d3.json("data.json", function(energy) {
     //  for (var i=0; i<node[0].length;i++) {
     var a = [];
     node[0][0].addEventListener("click",function (d) {
-        console.log(d);
+        console.log(node[0]);
         a = generateNode(d);
         if (node[0][0].className.animVal==="node1") {
             node[0][0].className.animVal = "node2";
