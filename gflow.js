@@ -4,9 +4,14 @@ var margin = {top: 1, right: 1, bottom: 6, left: 1},
     height = 500 - margin.top - margin.bottom;
 
 var formatNumber = d3.format(",.0f"),
-    format = function(d) { return formatNumber(d) + " 访问次数"; },
-    format_for_node = function(d) { return formatNumber(d) + " 浏览流量"; },
-    color = d3.scale.category20();  /*颜色是随机变化的*/
+    format = function (d) {
+        return formatNumber(d) + " 访问次数";
+    },
+    format_for_node = function (d) {
+        return formatNumber(d) + " 浏览流量";
+    },
+    color = d3.scale.category20();
+/*颜色是随机变化的*/
 
 var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -27,7 +32,7 @@ var oldNode = "node1";
 var newNode = "node2";
 
 
-d3.json("data.json", function(energy) {
+d3.json("data.json", function (energy) {
 
     sankey
         .nodes(energy.nodes)
@@ -38,10 +43,14 @@ d3.json("data.json", function(energy) {
             .data(energy.links)
             .enter().append("path")
             .attr("class", "link")
-            .attr("style","display:block")
+            .attr("style", "display:block")
             .attr("d", path)
-            .style("stroke-width", function(d) { return Math.max(1, d.dy); })
-            .sort(function(a, b) { return b.dy - a.dy; })
+            .style("stroke-width", function (d) {
+                return Math.max(1, d.dy);
+            })
+            .sort(function (a, b) {
+                return b.dy - a.dy;
+            })
         ;
 
     /*
@@ -58,23 +67,23 @@ d3.json("data.json", function(energy) {
         console.log(d);
         var b = [];
         //console.log(d.srcElement.__data__);
-        for (var i = 0; i<link[0].length;i++) {
+        for (var i = 0; i < link[0].length; i++) {
             //  console.log(link[0][i].__data__.source.name);
             //  console.log(d.srcElement.__data__.target.name);
             /*寻找源是目标,即找出下一条高亮路劲,不过现在只能找出一条*/
-            if (link[0][i].__data__.source.name===d.srcElement.__data__.target.name)
+            if (link[0][i].__data__.source.name === d.srcElement.__data__.target.name)
                 b.push(i);
         }
         /*把去路上的全部高亮了*/
-        for (var j =0 ;j < b.length; j++ ) {
-            for (var i =0 ;i<link[0].length;i++) {
-                if (link[0][b[j]].__data__.target.name===link[0][i].__data__.source.name)    b.push(i);
+        for (var j = 0; j < b.length; j++) {
+            for (var i = 0; i < link[0].length; i++) {
+                if (link[0][b[j]].__data__.target.name === link[0][i].__data__.source.name)    b.push(i);
             }
         }
 
-        for (var i = 0; i<link[0].length;i++) {
+        for (var i = 0; i < link[0].length; i++) {
             /*把当前的也加入*/
-            if (link[0][i].__data__.target.name===d.srcElement.__data__.target.name && link[0][i].__data__.source.name===d.srcElement.__data__.source.name)
+            if (link[0][i].__data__.target.name === d.srcElement.__data__.target.name && link[0][i].__data__.source.name === d.srcElement.__data__.source.name)
                 b.push(i);
         }
         /***
@@ -87,8 +96,8 @@ d3.json("data.json", function(energy) {
                 a.push(i);
             }
         }
-        for (var j=0; j< a.length; j++) {
-            for (var i=0; i<link[0].length;i++) {
+        for (var j = 0; j < a.length; j++) {
+            for (var i = 0; i < link[0].length; i++) {
                 if (link[0][a[j]].__data__.source.name === link[0][i].__data__.target.name) a.push(i);
             }
         }
@@ -105,9 +114,9 @@ d3.json("data.json", function(energy) {
     function generateNode(d) {
         var res = [];
         var b = [];
-        for (var i = 0; i<link[0].length;i++) {
+        for (var i = 0; i < link[0].length; i++) {
             /*寻找源是目标,即找出下一条高亮路劲,不过现在只能找出一条*/
-            if ( link[0][i].__data__.source.name === d.srcElement.__data__.target.name ) {
+            if (link[0][i].__data__.source.name === d.srcElement.__data__.target.name) {
                 res.push(d.srcElement.__data__.source.name);
                 res.push(d.srcElement.__data__.target.name);
                 res.push(link[0][i].__data__.target.name);
@@ -116,9 +125,9 @@ d3.json("data.json", function(energy) {
 
         }
         /*把去路上的全部高亮了*/
-        for (var j =0 ;j < b.length; j++ ) {
-            for (var i =0 ;i<link[0].length;i++) {
-                if (link[0][b[j]].__data__.target.name===link[0][i].__data__.source.name)   {
+        for (var j = 0; j < b.length; j++) {
+            for (var i = 0; i < link[0].length; i++) {
+                if (link[0][b[j]].__data__.target.name === link[0][i].__data__.source.name) {
                     res.push(link[0][i].__data__.source.name);
                     res.push(link[0][i].__data__.target.name);
                     b.push(i);
@@ -126,10 +135,10 @@ d3.json("data.json", function(energy) {
             }
         }
 
-        for (var i = 0; i<link[0].length;i++) {
+        for (var i = 0; i < link[0].length; i++) {
             /*把当前的也加入*/
-            if (link[0][i].__data__.target.name===d.srcElement.__data__.target.name && link[0][i].__data__.source.name ===
-                    d.srcElement.__data__.source.name) {
+            if (link[0][i].__data__.target.name === d.srcElement.__data__.target.name && link[0][i].__data__.source.name ===
+                d.srcElement.__data__.source.name) {
                 b.push(i);
                 res.push(d.srcElement.__data__.source.name);
                 res.push(d.srcElement.__data__.target.name);
@@ -147,8 +156,8 @@ d3.json("data.json", function(energy) {
                 res.push(link[0][i].__data__.source.name);
             }
         }
-        for (var j=0; j< a.length; j++) {
-            for (var i=0; i<link[0].length;i++) {
+        for (var j = 0; j < a.length; j++) {
+            for (var i = 0; i < link[0].length; i++) {
                 if (link[0][a[j]].__data__.source.name === link[0][i].__data__.target.name) {
                     a.push(i);
                     res.push(link[0][a[j]].__data__.source.name);
@@ -160,48 +169,66 @@ d3.json("data.json", function(energy) {
     }
 
 
-
-
     /*显示路径的说明*/
     link.append("title")
-        .text(function(d) { return d.source.name + " 到 " + d.target.name + "\n" + format(d.value); });
+        .text(function (d) {
+            return d.source.name + " 到 " + d.target.name + "\n" + format(d.value);
+        });
     /*link加个div标签*/
     link.append("div")
-        .style(function() {return "background:red"})
+        .style(function () {
+            return "background:red"
+        })
         .text("rrr");
 
     var node = svg.append("g").selectAll(".node")
         .data(energy.nodes)
         .enter().append("g")
         .attr("class", "node1")
-        .attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"; })
+        .attr("transform", function (d) {
+            return "translate(" + d.x + "," + d.y + ")";
+        })
         .call(d3.behavior.drag()
-            .origin(function(d) { return d; })
-            .on("dragstart", function() { this.parentNode.appendChild(this); }));
+            .origin(function (d) {
+                return d;
+            })
+            .on("dragstart", function () {
+                this.parentNode.appendChild(this);
+            }));
     //.on("drag", dragmove)) 设置不能拖动.不然太乱了
 
     node.append("rect")
-        .attr("height", function(d) { return d.dy; })
+        .attr("height", function (d) {
+            return d.dy;
+        })
         .attr("width", sankey.nodeWidth())
 
         //          .style("fill", function(d) { return d.color = color(d.name.replace(/ .*/, "")); })
-        .style("stroke", function(d) { return d3.rgb(d.color).darker(2); })
+        .style("stroke", function (d) {
+            return d3.rgb(d.color).darker(2);
+        })
         .append("title")
-        .text(function(d) { return d.name + "\n" + format_for_node(d.value); })
+        .text(function (d) {
+            return d.name + "\n" + format_for_node(d.value);
+        })
     ;
 
 
     node.append("text")
-        .attr("y", function(d) { return d.dy/12; })
+        .attr("y", function (d) {
+            return d.dy / 12;
+        })
         .attr("dy", ".5em")
         .attr("text-anchor", "end")
         .attr("transform", null)
-        .text(function(d) { return d.name; })
-        .filter(function(d) { return d.x < width / 2; })
-        .attr("x",  sankey.nodeWidth()/10)  //删掉了上面对x属性赋值的操作,没啥用~主要是为了改变附加的说明,这个到后面换成标签
+        .text(function (d) {
+            return d.name;
+        })
+        .filter(function (d) {
+            return d.x < width / 2;
+        })
+        .attr("x", sankey.nodeWidth() / 10)  //删掉了上面对x属性赋值的操作,没啥用~主要是为了改变附加的说明,这个到后面换成标签
         .attr("text-anchor", "start");
-
-
 
 
     function dragmove(d) {
@@ -209,32 +236,34 @@ d3.json("data.json", function(energy) {
         sankey.relayout();
         link.attr("d", path);
     }
+
     //   console.log(link[0][0].__data__.source.sourceLinks);
     var a = [];     //需要高亮的路径,存放数组
     var b = [];
     var point = 0;  //点击某个point之后动态生成a数组
 
-    for (var i = 0; i < link[0].length; i++ ) {
-        var k=0;
-        link[0][i].addEventListener("click", function (d){   /*现在存在问题是点击之后返回当前点击的是哪个link*/
-            a = generateArr(d);      /*点击之后动态生成*/
+    for (var i = 0; i < link[0].length; i++) {
+        var k = 0;
+        link[0][i].addEventListener("click", function (d) {   /*现在存在问题是点击之后返回当前点击的是哪个link*/
+            a = generateArr(d);
+            /*点击之后动态生成*/
             b = generateNode(d);
             b = b.unique();
-            if ( link[0][a[0]].className.animVal === oldLink ) {
-                for ( var ii=0; ii<link[0].length; ii++ ) {
+            if (link[0][a[0]].className.animVal === oldLink) {
+                for (var ii = 0; ii < link[0].length; ii++) {
                     link[0][ii].className.baseVal = oldLink;
                     link[0][ii].className.animVal = oldLink;
                 }
-                for (var ii = 0; ii < node[0].length; ii++ ) {
+                for (var ii = 0; ii < node[0].length; ii++) {
                     node[0][ii].className.animVal = oldNode;
                     node[0][ii].className.baseVal = oldNode;
                 }
 
-                for (k = 0;k < a.length; k++) {
-                    link[0][a[k]].className.baseVal=newLink;
-                    link[0][a[k]].className.animVal=newLink;
+                for (k = 0; k < a.length; k++) {
+                    link[0][a[k]].className.baseVal = newLink;
+                    link[0][a[k]].className.animVal = newLink;
                 }
-                for ( var j = 0; j < b.length; j++ ) {
+                for (var j = 0; j < b.length; j++) {
                     for (var r = 0; r < node[0].length; r++) {
                         if (node[0][r].__data__.name === b[j]) {
                             node[0][r].className.animVal = newNode;
@@ -244,11 +273,11 @@ d3.json("data.json", function(energy) {
                 }
             }
             else {
-                for (k = 0;k< a.length;k++) {
-                    link[0][a[k]].className.baseVal=oldLink;
-                    link[0][a[k]].className.animVal=oldLink;
+                for (k = 0; k < a.length; k++) {
+                    link[0][a[k]].className.baseVal = oldLink;
+                    link[0][a[k]].className.animVal = oldLink;
                 }
-                for ( var j = 0; j < b.length; j++ ) {
+                for (var j = 0; j < b.length; j++) {
                     for (var r = 0; r < node[0].length; r++) {
                         if (node[0][r].__data__.name === b[j]) {
                             node[0][r].className.animVal = oldNode;
@@ -260,8 +289,8 @@ d3.json("data.json", function(energy) {
         });
     }
 
-    node[0][0].addEventListener("click",function (d) {
-        if (node[0][0].className.animVal===oldNode) {
+    node[0][0].addEventListener("click", function (d) {
+        if (node[0][0].className.animVal === oldNode) {
             node[0][0].className.animVal = newNode;
             node[0][0].className.baseVal = newNode;
         }
