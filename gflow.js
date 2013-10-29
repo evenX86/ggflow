@@ -188,14 +188,6 @@ d3.json("data.json", function (energy) {
         .attr("transform", function (d) {
             return "translate(" + d.x + "," + d.y + ")";
         })
-        .call(d3.behavior.drag()
-            .origin(function (d) {
-                return d;
-            })
-            .on("dragstart", function () {
-                this.parentNode.appendChild(this);
-            }));
-    //.on("drag", dragmove)) 设置不能拖动.不然太乱了
 
     node.append("rect")
         .attr("height", function (d) {
@@ -230,12 +222,6 @@ d3.json("data.json", function (energy) {
         .attr("x", sankey.nodeWidth() / 10)  //删掉了上面对x属性赋值的操作,没啥用~主要是为了改变附加的说明,这个到后面换成标签
         .attr("text-anchor", "start");
 
-
-    function dragmove(d) {
-        d3.select(this).attr("transform", "translate(" + d.x + "," + (d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))) + ")");
-        sankey.relayout();
-        link.attr("d", path);
-    }
 
     //   console.log(link[0][0].__data__.source.sourceLinks);
     var a = [];     //需要高亮的路径,存放数组
@@ -289,16 +275,136 @@ d3.json("data.json", function (energy) {
         });
     }
 
-    node[0][0].addEventListener("click", function (d) {
-        if (node[0][0].className.animVal === oldNode) {
-            node[0][0].className.animVal = newNode;
-            node[0][0].className.baseVal = newNode;
+    /**
+     *
+     * @param d
+     * @returns {Array}
+     * 根据点击的节点m返回需要高亮的link，和generateArr基本相同,后面可以合成一个函数.
+     *
+     */
+    function generateLink(d) {
+        var b = [];
+        /*先找去路的*/
+        for (var i = 0; i < link[0].length; i++) {
+            if (link[0][i].__data__.source.name === d.srcElement.__data__.name) b.push(i);
         }
-        else {
-            node[0][0].className.animVal = oldNode;
-            node[0][0].className.baseVal = oldNode;
+        /*把去路上的全部高亮了*/
+        for (var j = 0; j < b.length; j++) {
+            for (var i = 0; i < link[0].length; i++) {
+                if (link[0][b[j]].__data__.target.name === link[0][i].__data__.source.name)    b.push(i);
+            }
         }
-    });
+        /*再找去路的*/
+        var a = [];
+        for (var i = 0; i < link[0].length; i++) {
+            if (link[0][i].__data__.target.name === d.srcElement.__data__.name) {
+                a.push(i);
+            }
+        }
+        for (var j = 0; j < a.length; j++) {
+            for (var i = 0; i < link[0].length; i++) {
+                if (link[0][a[j]].__data__.source.name === link[0][i].__data__.target.name) a.push(i);
+            }
+        }
+        a = a.concat(b);
+        return a;
+    }
+
+
+    /**
+     *
+     * @param d
+     * @returns {Array}
+     * 返回点击node后需要高亮的node数组
+     */
+    function generateNodeII(d) {
+        var res = [];
+        var b = [];
+        for (var i = 0; i < link[0].length; i++) {
+            /*寻找源是目标,即找出下一条高亮路劲,不过现在只能找出一条*/
+            if (link[0][i].__data__.source.name === d.srcElement.__data__.name) {
+                res.push(d.srcElement.__data__.name);
+                res.push(link[0][i].__data__.target.name);
+                b.push(i);
+            }
+
+        }
+        /*把去路上的全部高亮了*/
+        for (var j = 0; j < b.length; j++) {
+            for (var i = 0; i < link[0].length; i++) {
+                if (link[0][b[j]].__data__.target.name === link[0][i].__data__.source.name) {
+                    res.push(link[0][i].__data__.source.name);
+                    res.push(link[0][i].__data__.target.name);
+                    b.push(i);
+                }
+            }
+        }
+
+        var a = [];
+        for (var i = 0; i < link[0].length; i++) {
+            if (link[0][i].__data__.target.name === d.srcElement.__data__.name) {
+                a.push(i);
+                res.push(link[0][i].__data__.target.name);
+            }
+        }
+        for (var j = 0; j < a.length; j++) {
+            for (var i = 0; i < link[0].length; i++) {
+                if (link[0][a[j]].__data__.source.name === link[0][i].__data__.target.name) {
+                    a.push(i);
+                    res.push(link[0][a[j]].__data__.source.name);
+                    res.push(link[0][a[j]].__data__.target.name);
+                }
+            }
+        }
+        return  res;
+    }
+
+    for (var i = 0; i < node[0].length; i++) {
+        node[0][i].addEventListener("click", function (d) {
+            var linkArr = [];
+            var nodeArr = [];
+            linkArr = generateLink(d);
+            nodeArr = generateNodeII(d);
+
+            if (link[0][linkArr[0]].className.animVal === oldLink) {
+                for (var ii = 0; ii < link[0].length; ii++) {
+                    link[0][ii].className.baseVal = oldLink;
+                    link[0][ii].className.animVal = oldLink;
+                }
+                for (var ii = 0; ii < node[0].length; ii++) {
+                    node[0][ii].className.animVal = oldNode;
+                    node[0][ii].className.baseVal = oldNode;
+                }
+
+                for (k = 0; k < linkArr.length; k++) {
+                    link[0][linkArr[k]].className.baseVal = newLink;
+                    link[0][linkArr[k]].className.animVal = newLink;
+                }
+                for (var j = 0; j < nodeArr.length; j++) {
+                    for (var r = 0; r < node[0].length; r++) {
+                        if (node[0][r].__data__.name === nodeArr[j]) {
+                            node[0][r].className.animVal = newNode;
+                            node[0][r].className.baseVal = newNode;
+                        }
+                    }
+                }
+            }
+            else {
+                for (k = 0; k < linkArr.length; k++) {
+                    link[0][linkArr[k]].className.baseVal = oldLink;
+                    link[0][linkArr[k]].className.animVal = oldLink;
+                }
+                for (var j = 0; j < nodeArr.length; j++) {
+                    for (var r = 0; r < node[0].length; r++) {
+                        if (node[0][r].__data__.name === nodeArr[j]) {
+                            node[0][r].className.animVal = oldNode;
+                            node[0][r].className.baseVal = oldNode;
+                        }
+                    }
+                }
+            }
+        });
+    }
 
 });
 
