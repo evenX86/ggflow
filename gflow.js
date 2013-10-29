@@ -64,7 +64,6 @@ d3.json("data.json", function (energy) {
      * @returns {Array} 返回流经该处的流量经过的路径
      */
     function generateArr(d) {
-        console.log(d);
         var b = [];
         //console.log(d.srcElement.__data__);
         for (var i = 0; i < link[0].length; i++) {
@@ -162,6 +161,7 @@ d3.json("data.json", function (energy) {
                     a.push(i);
                     res.push(link[0][a[j]].__data__.source.name);
                     res.push(link[0][a[j]].__data__.target.name);
+                    res.push(link[0][i].__data__.source.name);
                 }
             }
         }
@@ -345,6 +345,7 @@ d3.json("data.json", function (energy) {
             if (link[0][i].__data__.target.name === d.srcElement.__data__.name) {
                 a.push(i);
                 res.push(link[0][i].__data__.target.name);
+                res.push(link[0][i].__data__.source.name);
             }
         }
         for (var j = 0; j < a.length; j++) {
@@ -353,6 +354,7 @@ d3.json("data.json", function (energy) {
                     a.push(i);
                     res.push(link[0][a[j]].__data__.source.name);
                     res.push(link[0][a[j]].__data__.target.name);
+                    res.push(link[0][i].__data__.source.name);
                 }
             }
         }
@@ -365,6 +367,8 @@ d3.json("data.json", function (energy) {
             var nodeArr = [];
             linkArr = generateLink(d);
             nodeArr = generateNodeII(d);
+            nodeArr = nodeArr.unique();
+            console.log(nodeArr);
 
             if (link[0][linkArr[0]].className.animVal === oldLink) {
                 for (var ii = 0; ii < link[0].length; ii++) {
