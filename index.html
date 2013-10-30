@@ -1,66 +1,93 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="style.css" type="text/css" />
-<script src="d3.v3.js"></script>
-<script src="util.js"></script>
-<script src="sankey.js"></script>
-<title>访问流</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="d3.v3.js"></script>
+    <script src="util.js"></script>
+    <script src="sankey.js"></script>
+    <title>访问流</title>
 </head>
 
 <body>
 <div id="ID-view" class="uK wA">
-  <div class = "p0">
-    <div class = "qz">
-      <div id = "ID-reportContainer" class = "Zj">
-        <div id = "ID-report" class = "ds">
-          <div class = "Mj">
-            <div id = "ID-flowReportHeader">标题|时间选择|维度选择</div>
-            <div class="Wj tzb">
-              <div id = "ID-tab">
-                <div>
-                  <div id = "ID-intelligenceFlow-visitsFlow">
-                    <div class = "ID-segmentInfo cwb"></div>
-                    <div class="ID-fixedContainer vub">
-                      <div class="J4">
-                        <div id = "ID-scrollContainer" class="ID-scrollContainer n7">
-                          <div id="ID-flowHeader">
-                            <div class="Dvb">
-                              <table class="ID-flowHeaderElement qo" style="margin-left:100px">
-                              	<tbody>
-                               	 	<tr>
-                                    	<th width="280">
-                                        	<div class = "ID-dimension ACTION-showDimensionPicker TARGET- yd tg Br">国家/地区</div>
-                                            <div class="ID-dimension-details ACTION-showDimensionDetails TARGET- uB">
-                                            	<div class="XO"></div> 
+    <div class="p0">
+        <div class="qz">
+            <div id="ID-reportContainer" class="Zj">
+                <div id="ID-report" class="ds">
+                    <div class="Mj">
+                        <div id="ID-flowReportHeader">标题|时间选择|维度选择</div>
+                        <div class="Wj tzb">
+                            <div id="ID-tab">
+                                <div>
+                                    <div id="ID-intelligenceFlow-visitsFlow">
+                                        <div class="ID-segmentInfo cwb"></div>
+                                        <div class="ID-fixedContainer vub">
+                                            <div class="J4">
+                                                <div id="ID-scrollContainer" class="ID-scrollContainer n7">
+                                                    <div id="ID-flowHeader">
+                                                        <div class="Dvb">
+                                                            <table class="ID-flowHeaderElement qo"
+                                                                   style="margin-left:100px">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <th width="280">
+                                                                        <div class="ID-dimension ACTION-showDimensionPicker TARGET- yd tg Br">
+                                                                            国家/地区
+                                                                        </div>
+                                                                        <div class="ID-dimension-details ACTION-showDimensionDetails TARGET- uB">
+                                                                            <div class="XO"></div>
+                                                                        </div>
+                                                                    </th>
+                                                                    <th width="280">
+                                                                        <div class="nB">起始网页</div>
+                                                                        <div class="ttb">在 35.4K 次访问中，有 19.1K 次访问者中途离开
+                                                                        </div>
+                                                                    </th>
+                                                                </tr>
+                                                            </table>
+                                                            </tbody>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ID-svcGraph D0">
+                                                        <p id="chart">
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </th>
-                                        <th width="280">
-                                        	<div class = "nB">起始网页</div>
-                                            <div class = "ttb">在 35.4K 次访问中，有 19.1K 次访问者中途离开</div>
-                                        </th>
-                                    </tr>
-                              	</table>
-                              </tbody>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="ID-svcGraph D0">
-                              <p id="chart">
-                          </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+<div>
+    <div id="test1" style="background-color:red;width:200px;height:200px;float:left"></div>
+    <div id="test2" style="background-color:green;width:200px;height:200px;float:left"></div>
+    <div id="test2" style="background-color:yellow;width:200px;height:200px;float:left"></div>
+    <div id="test2" style="background-color:blue;width:200px;height:200px;float:left"></div>
 </div>
 </body>
-<script src = "gflow.js" ></script>
+<script src="gflow.js"></script>
+<script>
+    /*
+     function display() {
+     alert("你点到我啦！")
+     }
+
+
+     function man(){
+     var temp = document.getElementById("test1");
+     this.name = temp;
+     this.showName = function(){console.log("gg");}
+     }
+     function woman(){}
+     var a = new man();
+     var b = new woman();
+     a.showName.call(b,",");*/
+</script>
 </html>

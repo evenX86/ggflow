@@ -1,24 +1,93 @@
-{"nodes":[
-    {"name":"中文测试"},
-    {"name":"1"},
-    {"name":"2"},
-    {"name":"3"},
-    {"name":"4"},
-    {"name":"5"},
-    {"name":"6"},
-    {"name":"7"},
-    {"name":"8"},
-    {"name":"9"}
+{"nodes": [
+    {
+        "name": "艾欧尼亚大陆"
+    },
+    {
+        "name": "1"
+    },
+    {
+        "name": "2"
+    },
+    {
+        "name": "3"
+    },
+    {
+        "name": "4"
+    },
+    {
+        "name": "5"
+    },
+    {
+        "name": "6"
+    },
+    {
+        "name": "7"
+    },
+    {
+        "name": "8"
+    },
+    {
+        "name": "9"
+    },
+    {
+        "name": "china"
+    }
+
 ],
-    "links":[
-        {"source":0,"target":1,"value":4500},
-        {"source":0,"target":8,"value":1500},
-        {"source":8,"target":9,"value":900},
-        {"source":1,"target":2,"value":2810},
-        {"source":2,"target":3,"value":1010},
-        {"source":1,"target":4,"value":510},
-        {"source":4,"target":3,"value":210},
-        {"source":3,"target":5,"value":210},
-        {"source":5,"target":6,"value":110},
-        {"source":6,"target":7,"value":10}
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "value": 4500
+        },
+        {
+            "source": 0,
+            "target": 8,
+            "value": 1500
+        },
+        {
+            "source": 10,
+            "target": 8,
+            "value": 500
+        },
+        {
+            "source": 8,
+            "target": 9,
+            "value": 900
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "value": 2810
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "value": 1010
+        },
+        {
+            "source": 1,
+            "target": 4,
+            "value": 510
+        },
+        {
+            "source": 4,
+            "target": 3,
+            "value": 210
+        },
+        {
+            "source": 3,
+            "target": 5,
+            "value": 210
+        },
+        {
+            "source": 5,
+            "target": 6,
+            "value": 110
+        },
+        {
+            "source": 6,
+            "target": 7,
+            "value": 10
+        }
     ]}

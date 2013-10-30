@@ -1,221 +1,253 @@
 @charset "utf-8";
 /* CSS Document */
 
-	body,input,select,textarea {
-		font-family:tahoma,arial,sans-sarif;
-		font-size:12px;
-		}
-	div,form {
-		margin:0;
-		padding:0;
-		outline-style:none;
-		}
-			
-	.wA {
-		height:auto;
-		overflow:hidden;
-		width:auto;
-		}
-	.uK {
-		min-width:760px;
-		vertical-align:top;
-		width:100%;
-		}
-	.p0{
-		width:100%
-		}
-	.qz{
-		min-width:600px;
-		padding:0;
-		background:#fff;
-		vertical-align:top;
-		width:100%;
-		}
-	.Zj{
-		min-height:300px;
-		background-color:#fff;
-		}
-	.ds{
-		margin:0;
-		min-height:500px;
-		min-width: 99%;
-	}
-	.cwb{
-		color:#999;
-		margin:-left:8px;
-		display:block;
-	}
-		
-	.vub {
-		display:block;
-		position:relative;
-		-webkit-user-select:none;
-		}
-	.Dvb{
-		margin-top:20px;
-		}
-	.qo {
-		font-size:12px;
-		border:none;
-		}
-	.qo .yd {
-		width:147px;
-		text-align:left;
-		margin:0;
-		color:white;
-		}
-	.yd.tg{
-		background-color:#9db675;
-		border-color:#6b7d4b;
-		}
-	.yd{
-		border-style:solid;
-		border-width:1px;
-		background:transparent;
-		border-radius:3px;
-		cursor:pointer;
-		font-weight:bold;
-		padding:3px 5px;
-		-webkit-border-top-left-radius:3px;
-		-webkit-border-top-right-radius:3px;
-		-webkit-border-bottom-left-radius:3px;
-		-webkit-border-bottom-right-radius:3px;
-		}
-	.Br{
-		float:left;
-		margin:0 5px;
-		width:208px;
-		}
-	.qo .uB{
-		cursor:pointer;
-		height:20px;
-		left:165px;
-		position:relative;
-		width:20px;
-		border-radius:4px;
-		border:2px solid #ccc;
-		background-color:#9db675;
-		}
-	.qo th {
-		font-weight:bold;
-		margin-left:auto;
-		margin-right:auto;
-		}
-	td,th{
-		display:table-cell;
-		vertical-align:inherit;
-		}
-	.XO{
-		background-image:url(gear_dim.png);
-		background-position:center;
-		background-repeat:no-repeat;
-		background-color:#f7f7f7;
-		height:20px;
-		width:20px;
-		}
-	.nB {
-		color:#333;
-		position:relative;
-		text-align:left;
-		}
-	.ttb{
-		color:#777;
-		padding-top:3px;
-		text-align:left;
-		}
-	.J4{
-		background:#f7f7f7;
-		box-shadow: inset 2px 3px 10px rgba(0,0,0,.4);
-		position:relative;
-		}
-	.D0 {
-		margin-top:-7px;
-		position:relative;
-		}
-	/*这个作为第一次进入页面的class的css*/
-	.GU{
-		-moz-border-radius:5px;
-		-webkit-border-radius:5px;
-		border-radius:5px;
-		border-style:solid;
-		border-width:1px;
-		-webkit-box-shadow:0px 2px 2px #ccc;
-		box-shadow:0px,2px,2px,#ccc;
-		position:absolute;
-		}
-	.n7{
-		margin:1px 1px 1px 1px;
-		cursor:-webkit-grab;
-		display:block;
-		overflow:scroll;
-		left:2px;
-		position:relative;
-	}
-    #chart {
-        height: 500px;
-    }
-    $label_ {
-        width:100px;
-        height:100px;
-        background-color:red;
-    }
+body, input, select, textarea {
+    font-family: tahoma, arial, sans-sarif;
+    font-size: 12px;
+}
 
-    .node rect {
-        cursor: point;
-        fill-opacity: .9;
-        shape-rendering: crispEdges;
-        width:187px;
+div, form {
+    margin: 0;
+    padding: 0;
+    outline-style: none;
+}
 
-    }
+.wA {
+    height: auto;
+    overflow: hidden;
+    width: auto;
+}
 
-    .node text {
-        pointer-events: none;
-        text-shadow: 0 1px 0 #fff;
-        width:187px;
-    }
+.uK {
+    min-width: 760px;
+    vertical-align: top;
+    width: 100%;
+}
 
-    .link {
-        fill: #D1DFE0;
-        stroke: #D1DFE0;
-        fill-opacity:0.8;
-        stroke-width:0.8px;
-        cursor:point;
-        display:none;
-    }
-    .link2 {
-        fill:#88a4a4;
-        stroke:#88a4a4;
-        fill-opacity:1;
-        stroke-width:1px;
-        cursor:point;
-    }
+.p0 {
+    width: 100%
+}
 
-    .link:hover {
-        stroke-opacity: 1;
-    }
-    .node1 {
-        border-color:rgb(209,223,224);
-        fill:rgb(209,223,224);
+.qz {
+    min-width: 600px;
+    padding: 0;
+    background: #fff;
+    vertical-align: top;
+    width: 100%;
+}
 
-        background-image:-webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
-    }
-    .node2 {
-        border-color: rgb(209, 223, 224);
-        fill:#88a4a4;
-        background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
-    }
-    .node1 text {
-        pointer-events: none;
-        text-shadow: 2px 2px 4px #000000;
-        width:187px;
-        font-family:verdana;
-        font-size:30px;
-    }
-    .node2 text {
-        pointer-events: none;
-        text-shadow: 2px 2px 4px #000000;
-        size:30px;
-        width:187px;
-        font-family:verdana;
-        font-size:30px;
-    }
+.Zj {
+    min-height: 300px;
+    background-color: #fff;
+}
+
+.ds {
+    margin: 0;
+    min-height: 500px;
+    min-width: 99%;
+}
+
+.cwb {
+    color: #999;
+    margin: -left : 8 px;
+    display: block;
+}
+
+.vub {
+    display: block;
+    position: relative;
+    -webkit-user-select: none;
+}
+
+.Dvb {
+    margin-top: 20px;
+}
+
+.qo {
+    font-size: 12px;
+    border: none;
+}
+
+.qo .yd {
+    width: 147px;
+    text-align: left;
+    margin: 0;
+    color: white;
+}
+
+.yd.tg {
+    background-color: #9db675;
+    border-color: #6b7d4b;
+}
+
+.yd {
+    border-style: solid;
+    border-width: 1px;
+    background: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 3px 5px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+}
+
+.Br {
+    float: left;
+    margin: 0 5px;
+    width: 208px;
+}
+
+.qo .uB {
+    cursor: pointer;
+    height: 20px;
+    left: 165px;
+    position: relative;
+    width: 20px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    background-color: #9db675;
+}
+
+.qo th {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.XO {
+    background-image: url(gear_dim.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f7f7f7;
+    height: 20px;
+    width: 20px;
+}
+
+.nB {
+    color: #333;
+    position: relative;
+    text-align: left;
+}
+
+.ttb {
+    color: #777;
+    padding-top: 3px;
+    text-align: left;
+}
+
+.J4 {
+    background: #f7f7f7;
+    box-shadow: inset 2px 3px 10px rgba(0, 0, 0, .4);
+    position: relative;
+}
+
+.D0 {
+    margin-top: -7px;
+    position: relative;
+    margin-left: 100px;
+
+}
+
+/*这个作为第一次进入页面的class的css*/
+.GU {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 0px 2px 2px #ccc;
+    box-shadow: 0px, 2px, 2px, #ccc;
+    position: absolute;
+}
+
+.n7 {
+    margin: 1px 1px 1px 1px;
+    cursor: -webkit-grab;
+    display: block;
+    overflow: scroll;
+    left: 2px;
+    position: relative;
+}
+
+#chart {
+    height: 500px;
+}
+
+$label_ {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.node rect {
+    cursor: point;
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+    width: 187px;
+
+}
+
+.node text {
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff;
+    width: 187px;
+}
+
+.link {
+    fill: #D1DFE0;
+    stroke: #D1DFE0;
+    fill-opacity: 0.8;
+    stroke-width: 0.8px;
+    cursor: point;
+    display: none;
+}
+
+.link2 {
+    fill: #88a4a4;
+    stroke: #88a4a4;
+    fill-opacity: 1;
+    stroke-width: 1px;
+    cursor: point;
+}
+
+.link:hover {
+    stroke-opacity: 1;
+}
+
+.node1 {
+    border-color: rgb(209, 223, 224);
+    fill: rgb(209, 223, 224);
+
+    background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+}
+
+.node2 {
+    border-color: rgb(209, 223, 224);
+    fill: #88a4a4;
+    background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+}
+
+.node1 text {
+    pointer-events: none;
+    text-shadow: 2px 2px 4px #000000;
+    width: 187px;
+    font-family: verdana;
+    font-size: 30px;
+}
+
+.node2 text {
+    pointer-events: none;
+    text-shadow: 2px 2px 4px #000000;
+    size: 30px;
+    width: 187px;
+    font-family: verdana;
+    font-size: 30px;
+}
