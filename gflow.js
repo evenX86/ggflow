@@ -223,7 +223,24 @@ d3.json("data.json", function (energy) {
         .attr("text-anchor", "start");
 
 
-    //   console.log(link[0][0].__data__.source.sourceLinks);
+    console.log(node);
+
+
+    node.append("line")
+        .attr("x1","195")
+        .attr("x2","195")
+        .attr("y1", function(d) { return d.dy-10;})
+        .attr("y2", function(d) { return d.dy;})
+        .attr("stroke","red")
+        .attr("stroke-width","20")
+        .attr("style","line")
+        .attr("text","line")
+
+        .append("title")
+        .text(function (d) {
+            return "流失次数 13.2k";
+        });
+
     var a = [];     //需要高亮的路径,存放数组
     var b = [];
     var point = 0;  //点击某个point之后动态生成a数组
@@ -368,7 +385,6 @@ d3.json("data.json", function (energy) {
             linkArr = generateLink(d);
             nodeArr = generateNodeII(d);
             nodeArr = nodeArr.unique();
-            console.log(nodeArr);
 
             if (link[0][linkArr[0]].className.animVal === oldLink) {
                 for (var ii = 0; ii < link[0].length; ii++) {
@@ -409,6 +425,9 @@ d3.json("data.json", function (energy) {
             }
         });
     }
+    /**
+     * 流式部分的显示,应该是要node里append个div
+     */
 
 });
 
