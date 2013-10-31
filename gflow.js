@@ -223,22 +223,43 @@ d3.json("data.json", function (energy) {
         .attr("text-anchor", "start");
 
 
-    console.log(node);
 
 
     node.append("line")
-        .attr("x1","195")
-        .attr("x2","195")
-        .attr("y1", function(d) { return d.dy-10;})
-        .attr("y2", function(d) { return d.dy;})
-        .attr("stroke","red")
-        .attr("stroke-width","20")
-        .attr("style","line")
-        .attr("text","line")
+        .attr("x1", "195")
+        .attr("x2", "195")
+        .attr("y1", function (d) {
+            var source = 0;
+            var target = 0;
+            var dy = 0;
+            source = d.value;
+            console.log(d);
+            for (var i = 0; i < d.sourceLinks.length; i++) {
+                target += d.sourceLinks[i].value;
+                dy += d.sourceLinks[i].dy;
+            }
+
+            if (d.dy < 6) return dy;
+            return dy+6;
+        })
+        .attr("y2", function (d) {
+            return d.dy -6;
+        })
+        .attr("stroke", "red")
+        .attr("stroke-width", "15")
+        .attr("stroke-linecap", "square")
+        .attr("style", "line")
+        .attr("display",function(d) {
+            var dy = 0;
+            for (var i = 0; i < d.sourceLinks.length; i++) {
+                dy += d.sourceLinks[i].dy;
+            }
+            if (d.dy-dy < 0.001) return "none";
+        })
 
         .append("title")
         .text(function (d) {
-            return "流失次数 13.2k";
+            return "13.2k 流失次数";
         });
 
     var a = [];     //需要高亮的路径,存放数组
