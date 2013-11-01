@@ -221,12 +221,23 @@ $label_ {
 .link:hover {
     stroke-opacity: 1;
 }
+.node0 {
+    border-color: rgb(209, 223, 224);
+    fill: #fff;
+    background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+    font-family:Arial;
+    font-size:12px;
+    position:absolute;
+
+}
 
 .node1 {
     border-color: rgb(209, 223, 224);
     fill: rgb(209, 223, 224);
-
     background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+    font-family:Arial;
+    font-size:12px;
+    position:absolute;
 }
 
 .node2 {

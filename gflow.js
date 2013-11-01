@@ -30,6 +30,7 @@ var oldLink = "link";  //原来的class,点击之后变为新的class
 var newLink = "link2";
 var oldNode = "node1";
 var newNode = "node2";
+var firstNode = "node0";    /*第一个node单独标记*/
 
 
 d3.json("data.json", function (energy) {
@@ -184,7 +185,10 @@ d3.json("data.json", function (energy) {
     var node = svg.append("g").selectAll(".node")
         .data(energy.nodes)
         .enter().append("g")
-        .attr("class", "node1")
+        .attr("class", function (d) {
+            if (d.targetLinks.length < 1) return "node0";
+            else return "node1";
+        })
         .attr("transform", function (d) {
             return "translate(" + d.x + "," + d.y + ")";
         })
@@ -233,7 +237,6 @@ d3.json("data.json", function (energy) {
             var target = 0;
             var dy = 0;
             source = d.value;
-            console.log(d);
             for (var i = 0; i < d.sourceLinks.length; i++) {
                 target += d.sourceLinks[i].value;
                 dy += d.sourceLinks[i].dy;
@@ -261,6 +264,11 @@ d3.json("data.json", function (energy) {
         .text(function (d) {
             return "13.2k 流失次数";
         });
+    /**
+     * 增加节点的说明标签
+     * @type {Array}
+     */
+
 
     var a = [];     //需要高亮的路径,存放数组
     var b = [];
@@ -279,6 +287,7 @@ d3.json("data.json", function (energy) {
                     link[0][ii].className.animVal = oldLink;
                 }
                 for (var ii = 0; ii < node[0].length; ii++) {
+                    if (node[0][ii].className.animVal === firstNode) continue;
                     node[0][ii].className.animVal = oldNode;
                     node[0][ii].className.baseVal = oldNode;
                 }
@@ -290,6 +299,7 @@ d3.json("data.json", function (energy) {
                 for (var j = 0; j < b.length; j++) {
                     for (var r = 0; r < node[0].length; r++) {
                         if (node[0][r].__data__.name === b[j]) {
+                            if (node[0][r].__data__.targetLinks.length < 1) continue;
                             node[0][r].className.animVal = newNode;
                             node[0][r].className.baseVal = newNode;
                         }
@@ -304,6 +314,7 @@ d3.json("data.json", function (energy) {
                 for (var j = 0; j < b.length; j++) {
                     for (var r = 0; r < node[0].length; r++) {
                         if (node[0][r].__data__.name === b[j]) {
+                            if (node[0][r].__data__.targetLinks.length < 1) continue;
                             node[0][r].className.animVal = oldNode;
                             node[0][r].className.baseVal = oldNode;
                         }
@@ -365,7 +376,6 @@ d3.json("data.json", function (energy) {
                 res.push(link[0][i].__data__.target.name);
                 b.push(i);
             }
-
         }
         /*把去路上的全部高亮了*/
         for (var j = 0; j < b.length; j++) {
@@ -413,6 +423,7 @@ d3.json("data.json", function (energy) {
                     link[0][ii].className.animVal = oldLink;
                 }
                 for (var ii = 0; ii < node[0].length; ii++) {
+                    if (node[0][ii].className.animVal === firstNode) continue;
                     node[0][ii].className.animVal = oldNode;
                     node[0][ii].className.baseVal = oldNode;
                 }
@@ -423,6 +434,7 @@ d3.json("data.json", function (energy) {
                 }
                 for (var j = 0; j < nodeArr.length; j++) {
                     for (var r = 0; r < node[0].length; r++) {
+                        if (node[0][r].__data__.targetLinks.length < 1) continue;
                         if (node[0][r].__data__.name === nodeArr[j]) {
                             node[0][r].className.animVal = newNode;
                             node[0][r].className.baseVal = newNode;
@@ -437,6 +449,7 @@ d3.json("data.json", function (energy) {
                 }
                 for (var j = 0; j < nodeArr.length; j++) {
                     for (var r = 0; r < node[0].length; r++) {
+                        if (node[0][r].__data__.targetLinks.length < 1) continue;
                         if (node[0][r].__data__.name === nodeArr[j]) {
                             node[0][r].className.animVal = oldNode;
                             node[0][r].className.baseVal = oldNode;
@@ -446,9 +459,6 @@ d3.json("data.json", function (energy) {
             }
         });
     }
-    /**
-     * 流式部分的显示,应该是要node里append个div
-     */
 
 });
 
