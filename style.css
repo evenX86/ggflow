@@ -187,11 +187,12 @@ $label_ {
     background-color: red;
 }
 
-.node rect {
+.node0 rect {
     cursor: point;
     fill-opacity: .9;
     shape-rendering: crispEdges;
     width: 187px;
+    background-image:-webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
 
 }
 
@@ -223,7 +224,7 @@ $label_ {
 }
 .node0 {
     border-color: rgb(209, 223, 224);
-    fill: #fff;
+    fill:  #FFF;
     background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
     font-family:Arial;
     font-size:12px;
@@ -262,6 +263,16 @@ $label_ {
     font-family: verdana;
     font-size: 30px;
 }
+
+.node0 text {
+    pointer-events: none;
+    text-shadow: 2px 2px 4px #000000;
+    size: 30px;
+    width: 187px;
+    font-family: verdana;
+    font-size: 30px;
+}
+
 line {
     position:absolute;
     font-size:16px;
