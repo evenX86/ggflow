@@ -11,7 +11,8 @@
  * @param d 当前的鼠标点击的地方
  * @returns {Array} 返回流经该处的流量经过的路径
  */
-function generateArr(d,link,node) {
+function generateArr(d, link, node) {
+    "use strict";
     var b = [];
     //console.log(d.srcElement.__data__);
     for (var i = 0; i < link[0].length; i++) {
@@ -58,7 +59,8 @@ function generateArr(d,link,node) {
  * @returns {Array}
  * 找出点击link时候需要高亮的节点。
  */
-function generateNode(d,link,node) {
+function generateNode(d, link, node) {
+    "use strict";
     var res = [];
     var b = [];
     for (var i = 0; i < link[0].length; i++) {
@@ -119,7 +121,8 @@ function generateNode(d,link,node) {
 /**
  * 点击link高亮函数
  */
-function highLightFromLink(link,node) {
+function highLightFromLink(link, node) {
+    "use strict";
     var a = [];     //需要高亮的路径,存放数组
     var b = [];
     var point = 0;  //点击某个point之后动态生成a数组
@@ -127,9 +130,9 @@ function highLightFromLink(link,node) {
     for (var i = 0; i < link[0].length; i++) {
         var k = 0;
         link[0][i].addEventListener("click", function (d) {   /*现在存在问题是点击之后返回当前点击的是哪个link*/
-            a = generateArr(d,link,node);
+            a = generateArr(d, link, node);
             /*点击之后动态生成*/
-            b = generateNode(d,link,node);
+            b = generateNode(d, link, node);
             b = b.unique();
             if (link[0][a[0]].className.animVal === oldLink) {
                 for (var ii = 0; ii < link[0].length; ii++) {
@@ -182,7 +185,8 @@ function highLightFromLink(link,node) {
  * 根据点击的节点m返回需要高亮的link，和generateArr基本相同,后面可以合成一个函数.
  *
  */
-function generateLink(d,link,node) {
+function generateLink(d, link, node) {
+    "use strict";
     var b = [];
     /*先找去路的*/
     for (var i = 0; i < link[0].length; i++) {
@@ -216,7 +220,8 @@ function generateLink(d,link,node) {
  * @returns {Array}
  * 返回点击node后需要高亮的node数组
  */
-function generateNodeII(d,link,node) {
+function generateNodeII(d, link, node) {
+    "use strict";
     var res = [];
     var b = [];
     for (var i = 0; i < link[0].length; i++) {
@@ -261,14 +266,15 @@ function generateNodeII(d,link,node) {
 /**
  * node点击高亮函数
  */
-function highLightFromNode(link,node) {
+function highLightFromNode(link, node) {
+    "use strict";
 
     for (var i = 0; i < node[0].length; i++) {
         node[0][i].addEventListener("click", function (d) {
             var linkArr = [];
             var nodeArr = [];
-            linkArr = generateLink(d,link,node);
-            nodeArr = generateNodeII(d,link,node);
+            linkArr = generateLink(d, link, node);
+            nodeArr = generateNodeII(d, link, node);
             nodeArr = nodeArr.unique();
 
             if (link[0][linkArr[0]].className.animVal === oldLink) {
@@ -282,7 +288,7 @@ function highLightFromNode(link,node) {
                     node[0][ii].className.baseVal = oldNode;
                 }
 
-                for (k = 0; k < linkArr.length; k++) {
+                for (var k = 0; k < linkArr.length; k++) {
                     link[0][linkArr[k]].className.baseVal = newLink;
                     link[0][linkArr[k]].className.animVal = newLink;
                 }

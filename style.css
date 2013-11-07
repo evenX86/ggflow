@@ -234,7 +234,7 @@ $label_ {
 
 .node1 {
     border-color: rgb(209, 223, 224);
-    fill: rgb(209, 223, 224);
+    fill: #99d370;
     background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
     font-family:Arial;
     font-size:12px;
@@ -249,7 +249,7 @@ $label_ {
 
 .node1 text {
     pointer-events: none;
-    text-shadow: 2px 2px 4px #000000;
+    fill:#000;
     width: 187px;
     font-family: verdana;
     font-size: 30px;
@@ -257,7 +257,7 @@ $label_ {
 
 .node2 text {
     pointer-events: none;
-    text-shadow: 2px 2px 4px #000000;
+    fill:#000;
     size: 30px;
     width: 187px;
     font-family: verdana;
@@ -266,11 +266,11 @@ $label_ {
 
 .node0 text {
     pointer-events: none;
-    text-shadow: 2px 2px 4px #000000;
     size: 30px;
     width: 187px;
     font-family: verdana;
     font-size: 30px;
+    fill:#000;
 }
 
 line {

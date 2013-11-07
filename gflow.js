@@ -107,6 +107,7 @@ d3.json("data.json", function (energy) {
         })
         .attr("x", sankey.nodeWidth() / 10)  //删掉了上面对x属性赋值的操作,没啥用~主要是为了改变附加的说明,这个到后面换成标签
         .attr("text-anchor", "start");
+
     node.append("line")
         .attr("x1", "195")
         .attr("x2", "195")
@@ -140,13 +141,19 @@ d3.json("data.json", function (energy) {
 
         .append("title")
         .text(function (d) {
-            return "13.2k次流失次数";
+            var source = d.value;
+            var target = 0;
+            for (var i = 0; i < d.sourceLinks.length; i++) {
+                target += d.sourceLinks[i].value;
+            }
+
+            return source-target + "次流失次数";
         });
     /**
      * 增加节点的说明标签
      * @type {Array}
      */
-    highLightFromLink(link,node);
-    highLightFromNode(link,node);
+    highLightFromLink(link, node);
+    highLightFromNode(link, node);
 });
 
