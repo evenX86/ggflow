@@ -76,6 +76,53 @@ d3.json("data.json", function (energy) {
         .attr("transform", function (d) {
             return "translate(" + d.x + "," + d.y + ")";
         })
+    node.append("line")
+        .attr("x1", "188")
+        .attr("x2", "188")
+        .attr("y1", function (d) {
+            var source = 0;
+            var target = 0;
+            var dy = 0;
+            source = d.value;
+            for (var i = 0; i < d.sourceLinks.length; i++) {
+                target += d.sourceLinks[i].value;
+                dy += d.sourceLinks[i].dy;
+            }
+
+            if (d.dy < 6) return dy;
+            return dy + 6;
+        })
+        .attr("y2", function (d) {
+            return d.dy - 6;
+        })
+        .attr("stroke", "red")
+        .attr("stroke-width", "15")
+        .attr("stroke-linecap", "round")
+        .attr("style", "line")
+        .attr("display", function (d) {
+            var dy = 0;
+            for (var i = 0; i < d.sourceLinks.length; i++) {
+                dy += d.sourceLinks[i].dy;
+            }
+            if (d.dy - dy < 0.001) return "none";
+        })
+
+        .append("title")
+        .text(function (d) {
+            var source = d.value;
+            var target = 0;
+            for (var i = 0; i < d.sourceLinks.length; i++) {
+                target += d.sourceLinks[i].value;
+            }
+
+            return source-target + "次流失次数";
+        })
+        .toBack = function () {
+        if (this.removed)return this;
+        var a = this.node.parentNode;
+        return"a" == a.tagName.toLowerCase() ? a.parentNode.insertBefore(this.node.parentNode, this.node.parentNode.parentNode.firstChild) : a.firstChild != this.node && a.insertBefore(this.node, this.node.parentNode.firstChild), c._toback(this, this.paper), this.paper, this
+    }
+    ;
 
     node.append("rect")
         .attr("height", function (d) {
@@ -108,47 +155,7 @@ d3.json("data.json", function (energy) {
         .attr("x", sankey.nodeWidth() / 10)  //删掉了上面对x属性赋值的操作,没啥用~主要是为了改变附加的说明,这个到后面换成标签
         .attr("text-anchor", "start");
 
-    node.append("line")
-        .attr("x1", "195")
-        .attr("x2", "195")
-        .attr("y1", function (d) {
-            var source = 0;
-            var target = 0;
-            var dy = 0;
-            source = d.value;
-            for (var i = 0; i < d.sourceLinks.length; i++) {
-                target += d.sourceLinks[i].value;
-                dy += d.sourceLinks[i].dy;
-            }
 
-            if (d.dy < 6) return dy;
-            return dy + 6;
-        })
-        .attr("y2", function (d) {
-            return d.dy - 6;
-        })
-        .attr("stroke", "red")
-        .attr("stroke-width", "15")
-        .attr("stroke-linecap", "square")
-        .attr("style", "line")
-        .attr("display", function (d) {
-            var dy = 0;
-            for (var i = 0; i < d.sourceLinks.length; i++) {
-                dy += d.sourceLinks[i].dy;
-            }
-            if (d.dy - dy < 0.001) return "none";
-        })
-
-        .append("title")
-        .text(function (d) {
-            var source = d.value;
-            var target = 0;
-            for (var i = 0; i < d.sourceLinks.length; i++) {
-                target += d.sourceLinks[i].value;
-            }
-
-            return source-target + "次流失次数";
-        });
     /**
      * 增加节点的说明标签
      * @type {Array}
