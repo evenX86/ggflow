@@ -187,11 +187,12 @@ $label_ {
     background-color: red;
 }
 
-.node rect {
+.node0 rect {
     cursor: point;
     fill-opacity: .9;
     shape-rendering: crispEdges;
     width: 187px;
+    background-image:-webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
 
 }
 
@@ -221,23 +222,34 @@ $label_ {
 .link:hover {
     stroke-opacity: 1;
 }
+.node0 {
+    border-color: rgb(209, 223, 224);
+    fill:  #FFF;
+    background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+    font-family:Arial;
+    font-size:12px;
+    position:absolute;
+
+}
 
 .node1 {
     border-color: rgb(209, 223, 224);
-    fill: rgb(209, 223, 224);
-
+    fill: #E2EFD9;
     background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+    font-family:Arial;
+    font-size:12px;
+    position:absolute;
 }
 
 .node2 {
     border-color: rgb(209, 223, 224);
-    fill: #88a4a4;
+    fill: #99d370;
     background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
 }
 
 .node1 text {
     pointer-events: none;
-    text-shadow: 2px 2px 4px #000000;
+    fill:#000;
     width: 187px;
     font-family: verdana;
     font-size: 30px;
@@ -245,12 +257,22 @@ $label_ {
 
 .node2 text {
     pointer-events: none;
-    text-shadow: 2px 2px 4px #000000;
+    fill:#000;
     size: 30px;
     width: 187px;
     font-family: verdana;
     font-size: 30px;
 }
+
+.node0 text {
+    pointer-events: none;
+    size: 30px;
+    width: 187px;
+    font-family: verdana;
+    font-size: 30px;
+    fill:#000;
+}
+
 line {
     position:absolute;
     font-size:16px;
@@ -275,6 +297,16 @@ line:hover {
     width:16px;
     height:20px;
     opacity:1;
-    stroke-linecap="square"
-
+}
+.reader {
+    background:white;
+    font-size:16px;
+    display:none;
+}
+rect title{
+    font-size:18pt;
+    font-family:verdana;
+    color:yellow;
+    border:10px;
+    display:none;
 }
