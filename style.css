@@ -234,7 +234,7 @@ $label_ {
 
 .node1 {
     border-color: rgb(209, 223, 224);
-    fill: #99d370;
+    fill: #E2EFD9;
     background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
     font-family:Arial;
     font-size:12px;
@@ -243,7 +243,7 @@ $label_ {
 
 .node2 {
     border-color: rgb(209, 223, 224);
-    fill: #88a4a4;
+    fill: #99d370;
     background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
 }
 
@@ -297,5 +297,190 @@ line:hover {
     width:16px;
     height:20px;
     opacity:1;
+}
+.reader {
+    background:white;
+    font-size:16px;
+    display:none;
+}
+rect title{
+    font-size:18pt;
+    font-family:verdana;
+    color:yellow;
+    border:10px;
+    display:none;
+    z-index:999;
+}
 
+.Ukb {
+    cursor: pointer;
+    position: absolute;
+}
+.VU {
+    border-color: rgb(209, 223, 224);
+    background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    -moz-box-shadow: 0px 2px 2px #ccc;
+    -webkit-box-shadow: 0px 2px 2px #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=\000027#CCCCCC\000027)";
+    filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=\000027#CCCCCC\000027)";
+    position: absolute;
+}
+.VUH {
+    border-color: rgb(209, 223, 224);
+    background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255));
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    -moz-box-shadow: 0px 2px 2px #ccc;
+    -webkit-box-shadow: 0px 2px 2px #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=\000027#CCCCCC\000027)";
+    filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=\000027#CCCCCC\000027)";
+    position: absolute;
+}
+
+
+.z6 {
+    background: no-repeat url(sprites.png) -767px -188px;
+    height: 21px;
+    width: 21px;
+    position:absolute;
+
+}
+.IU {
+    background: no-repeat url(sprites.png) -542px -124px;
+    height: 21px;
+    width: 21px;
+    position:absolute;
+}
+.out {
+    position: absolute;
+    background-color: rgb(236, 85, 64);
+    -webkit-print-color-adjust: exact;
+    left: 1000px;
+    top: 100px;
+    width: 16px;
+    height: 180px;
+    border-top-right-radius: 16px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.out1 {
+    position: absolute;
+    background-image: -webkit-linear-gradient(top, rgb(236, 85, 64), rgba(236, 85, 64, 0));
+    -webkit-print-color-adjust: exact;
+    left: 1000px;
+    top: 280px;
+    width: 16px;
+    height: 15px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.out2 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    left: 0px;
+    top: 83.5px;
+    width: 16px;
+    height: 20px;
+    opacity: 1;
+    cursor: pointer;
+}
+.QNb {
+    font-family: Arial;
+    font-size: 12px;
+    left: 29px;
+    padding-left: 3px;
+    padding-top: 2px;
+    position: absolute;
+    top: 8px;
+    white-space: nowrap;
+    color:#555555;
+    font-weight:bold;
+}
+.WS {
+    font-weight:bold;
+    color:#555555;
+    position: absolute;
+}
+.ID-hint {
+    position: fixed;
+    padding: 5px;
+    text-align: left;
+    font-family: arial,sans-serif;
+    color: #333;
+    font-size: 13px;
+    background-color: #fff;
+    border-style: solid;
+    border-top-color: #ccc;
+    border-left-color: #ccc;
+    border-right-color: #ccc;
+    border-bottom-color: #ccc;
+    border-width: 2px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    z-index:999;
+}
+.Td .Zb{
+    color: #333;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+.Td .Cc {
+    position:relative;
+}
+.Td .Cc .CJ {
+    background-color: none;
+    vertical-align: middle;
+    width: 60px;
+    display: inline-block;
+    position: relative;
+    margin-top: -14px;
+}
+
+.Td .Cc .KD {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Td .Cc .jL {
+    margin-top: 7px;
+    font-weight: bold;
+    border-collapse: collapse;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.Td .Cc .Sq {
+    padding-bottom: 7px;
+    border-bottom: 2px solid #ccc;
 }

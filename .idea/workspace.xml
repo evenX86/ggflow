@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e95b28cb-627f-4990-8587-35accdb02a8c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.json" afterPath="$PROJECT_DIR$/data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/16-flat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/____ - Google Analytics.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sprites.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-1.10.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/title.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/title.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tst.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gflow.js" afterPath="$PROJECT_DIR$/gflow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raphael-min.js" afterPath="$PROJECT_DIR$/raphael-min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/x.js" afterPath="$PROJECT_DIR$/x.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ggflow.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e95b28cb-627f-4990-8587-35accdb02a8c" time="1383811554755" ignored="false" />
+    <file path="/Dummy.txt" changelist="e95b28cb-627f-4990-8587-35accdb02a8c" time="1384410705564" ignored="false" />
     <file path="F:/test/test/src/Webflowtrace/Controller/StayTimeController.php" changelist="e95b28cb-627f-4990-8587-35accdb02a8c" time="1382602637183" ignored="false" />
     <file path="/a.js" changelist="e95b28cb-627f-4990-8587-35accdb02a8c" time="1383288114364" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,7 +43,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="22" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+            <state line="62" column="50" selection-start="4015" selection-end="4015" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,7 +52,7 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="22" selection-start="3558" selection-end="3558" vertical-scroll-proportion="0.0">
+            <state line="485" column="1" selection-start="8925" selection-end="8925" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -52,16 +61,7 @@
       <file leaf-file-name="gflow.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gflow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="33" selection-start="1024" selection-end="1024" vertical-scroll-proportion="-0.064556964">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="19" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+            <state line="72" column="6" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.39325842">
               <folding />
             </state>
           </provider>
@@ -70,7 +70,7 @@
       <file leaf-file-name="x.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/x.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="290" column="25" selection-start="9778" selection-end="9778" vertical-scroll-proportion="0.0">
+            <state line="131" column="35" selection-start="4081" selection-end="4097" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,20 +99,24 @@
         <option value="$PROJECT_DIR$/sankey.js" />
         <option value="$PROJECT_DIR$/d3.v2.min.js" />
         <option value="$PROJECT_DIR$/util.js" />
+        <option value="$PROJECT_DIR$/data.json" />
+        <option value="$PROJECT_DIR$/x.js" />
+        <option value="$PROJECT_DIR$/raphael-min.js" />
+        <option value="$PROJECT_DIR$/title.html" />
+        <option value="$PROJECT_DIR$/tool.js" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/tst.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/gflow.js" />
-        <option value="$PROJECT_DIR$/data.json" />
-        <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/x.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="297" />
-    <option name="y" value="8" />
-    <option name="width" value="1288" />
-    <option name="height" value="972" />
+    <option name="x" value="39" />
+    <option name="y" value="23" />
+    <option name="width" value="1346" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -140,6 +144,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -160,7 +165,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -169,22 +173,9 @@
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="options.searchVisible" value="true" />
-  </component>
-  <component name="PublishConfig">
-    <servers>
-      <server id="190f7e93-0973-4acb-a730-09d56e58f519">
-        <serverdata />
-      </server>
-      <server id="95787716-4cf0-4cfe-8609-ec9c25e9ad90">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-    </servers>
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
@@ -312,11 +303,15 @@
       <created>1383295153676</created>
       <updated>1383295153676</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="【更新】流失部分美化显示">
+      <created>1383813778340</created>
+      <updated>1383813778340</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="297" y="8" width="1288" height="972" extended-state="0" />
+    <frame x="39" y="23" width="1346" height="728" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925338" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -324,7 +319,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20860389" sideWeight="0.6707466" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16978194" sideWeight="0.6707466" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925338" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -332,8 +327,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925338" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925338" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -383,7 +378,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="【更新】功能分离" />
+    <option name="LAST_COMMIT_MESSAGE" value="【更新】流失部分美化显示" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -420,48 +415,40 @@
     <MESSAGE value="【更新】流失标志" />
     <MESSAGE value="【更新】流入节点的特殊处理" />
     <MESSAGE value="【更新】功能分离" />
+    <MESSAGE value="【更新】流失部分美化显示" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data.json">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/d3.v3.js">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7978" column="25" selection-start="275380" selection-end="275380" vertical-scroll-proportion="0.0" />
+        <state line="312" column="0" selection-start="4984" selection-end="4984" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/gflow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="33" selection-end="33" vertical-scroll-proportion="0.021766966" />
+        <state line="157" column="0" selection-start="4467" selection-end="4467" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+    <entry file="file://$PROJECT_DIR$/x.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="783" column="17" selection-start="11959" selection-end="11959" vertical-scroll-proportion="0.33290654" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1661" column="0" selection-start="27037" selection-end="27037" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1201" column="35" selection-start="20479" selection-end="20479" vertical-scroll-proportion="0.33289987" />
+        <state line="131" column="35" selection-start="4081" selection-end="4097" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sankey.js">
@@ -479,42 +466,57 @@
         <state line="8" column="15" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="22" selection-start="3558" selection-end="3558" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/d3.v3.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="947" column="15" selection-start="31733" selection-end="31733" vertical-scroll-proportion="0.021879021" />
+        <state line="913" column="11" selection-start="30219" selection-end="30219" vertical-scroll-proportion="0.33247423" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.json">
+    <entry file="file://$PROJECT_DIR$/raphael-min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+        <state line="1750" column="13" selection-start="107123" selection-end="107535" vertical-scroll-proportion="0.021879021" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="7" selection-start="2898" selection-end="2898" vertical-scroll-proportion="0.54810125" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1354" column="9" selection-start="21512" selection-end="21512" vertical-scroll-proportion="0.54810125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/x.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="290" column="25" selection-start="9778" selection-end="9778" vertical-scroll-proportion="0.0">
+        <state line="131" column="35" selection-start="4081" selection-end="4097" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="19" selection-start="340" selection-end="340" vertical-scroll-proportion="0.02225131" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="485" column="1" selection-start="8925" selection-end="8925" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="50" selection-start="4015" selection-end="4015" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gflow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="33" selection-start="1024" selection-end="1024" vertical-scroll-proportion="-0.064556964">
+        <state line="72" column="6" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.39325842">
           <folding />
         </state>
       </provider>
