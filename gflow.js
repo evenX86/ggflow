@@ -35,7 +35,6 @@ var firstNode = "node0";
 
 
 d3.json("data.json", function (energy) {
-
     sankey
         .nodes(energy.nodes)
         .links(energy.links)
@@ -246,7 +245,8 @@ d3.json("data.json", function (energy) {
         out2.innerHTML ="⇩";
         readDiv.innerHTML = value.__data__.name;
         readDiv.innerHTML += "<br>";
-        readDiv.innerHTML +=  format(value.__data__.value);
+        readDiv.innerHTML +=  value.__data__.value;
+        readDiv.innerHTML +=  "<div style='display:none'>"+sum+"</div>";
 
         if (sum == value.__data__.value) {
             out.style.display = "none";
@@ -267,9 +267,9 @@ d3.json("data.json", function (energy) {
         var pre = document.getElementById("sdflow");
 
         pre.appendChild(frameDiv);    //在node 上覆盖一层div
-        frameDiv.appendChild(newDiv)
-        frameDiv.appendChild(iconDiv)
-        frameDiv.appendChild(readDiv)
+        frameDiv.appendChild(newDiv);
+        frameDiv.appendChild(iconDiv);
+        frameDiv.appendChild(readDiv);
 
         pre.appendChild(out);       //流失标志主div
         pre.appendChild(out1);      //流失标志渐变部分div
@@ -283,11 +283,21 @@ d3.json("data.json", function (energy) {
     for (var i=0;i<oDiv.length;i++){
        // hintNameDiv.innerHTML =
         oDiv[i].onmousemove = function (d) {
-            console.log(d);
             hintDiv.style.display = "block";
             hintDiv.style.left = d.x-270+"px";
             hintDiv.style.top = d.y-80+"px";
             hintDiv.innerHTML = d.srcElement.offsetParent.innerText;
+            var text = d.srcElement.offsetParent.innerText;
+            var sum = d.srcElement.offsetParent.childNodes[2].childNodes[3].innerText;
+
+            var textArr = text.split("\n");
+            hintDiv.innerHTML = textArr[0];
+            var total =  parseInt(textArr[1]);
+            var out = parseInt(textArr[1]) - sum;
+            hintDiv.innerHTML +="<hr>" ;
+            hintDiv.innerHTML += sum + "    浏览流量("+(100*sum/total).toFixed(2)+"%)";
+            hintDiv.innerHTML += "<br>";
+            hintDiv.innerHTML += out + "    流失率("+((100*out)/total).toFixed(2)+"%)";
         }
         oDiv[i].onmouseout = function (d) {
             hintDiv.style.display = "none";
