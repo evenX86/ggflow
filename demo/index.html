@@ -1,106 +1,219 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="cn">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="Shortcut Icon" href="../img/favicon.ico" />
-    <link rel="stylesheet" href="../style.css" type="text/css"/>
-    <script src="../src/d3.v3.js"></script>
-    <script src="../src/jquery-1.10.2.js"></script>
-    <script src="../x.js"></script>
-    <script src="../util.js"></script>
-    <script src="../src/sankey.js"></script>
+    <!--
+        Web Flow Track v1.0.0
+
+        Copyright	@ 2011 SNDA Inc. Operation Monitoring Dept.
+
+        All Rights Reserved
+
+
+    -->
+    <meta charset="utf-8">
     <title>访问流</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Flow Track, SNDA HTML5, Web , CJ , WF , YHT.">
+
+    <!-- The styles -->
+    <!-- Less CSS -->
+    <script src="../src/jquery-1.10.2.js"></script>
+    <script src="../src/d3.v3.min.js"></script>
+    <script src="../src/sankey.js"></script>
+    <script src="../gflow.js"></script>
+    <script src="../x.js"></script>
+
+    <style>
+
+        h2 {
+            padding: 10px;
+            font-size: 16px !important;
+        }
+
+        .nopadetail label {
+            display: none;
+
+        }
+
+        #dt_example a:hover {
+            text-decoration: underline;
+        }
+
+        table.display thead th:active,
+        table.display thead td:active {
+            outline: none;
+        }
+
+        .nav-stacked li {
+            font-size: 13px;
+            height: 20px;
+            color: #016fd4;
+            padding: 5px;
+            cursor: pointer;
+
+        }
+
+        .grid div {
+            float: left;
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            height: 70px;
+        }
+
+        .table tbody tr:hover td, .table tbody tr:hover th {
+            background-color: #ffffcc;;
+        }
+
+        .contenttable tbody tr td {
+            border-right: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .contenttable tbody tr td:last-child {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .contenttable tbody tr:first-child td {
+            border-bottom-width: 0;
+            border-right: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .contenttable tbody tr:first-child td:last-child {
+            border-bottom-width: 0;
+            border-right-width: 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .contenttable tr td {
+            text-align: center;
+        }
+
+        .showdetail {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #ccc;
+            right: 0;
+            top: 0;
+            padding: 10px;
+            white-space: nowrap;
+            z-index: 200;
+            border-radius: 5px 0 5px 5px;
+            -moz-border-radius: 5px 0 5px 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+        }
+
+        .mainchoose li {
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-left: 15px;
+            display: block;
+            float: left;
+            cursor: pointer;
+        }
+
+        .mainchoose li:first-child {
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            display: block;
+            float: left;
+            cursor: pointer;
+        }
+
+        .mainchoose li:hover {
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #content {
+            position: relative;
+        }
+
+        #chartcontainer table tr {
+            height: auto;
+        }
+
+    </style>
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link href="../css/flow.css" rel="stylesheet">
 </head>
-
 <body>
-<div id="ID-view" class="uK wA">
-    <div class="p0">
-        <div class="qz">
-            <div id="ID-reportContainer" class="Zj">
-                <div id="ID-report" class="ds">
-                    <div class="Mj">
-                        <div id="ID-flowReportHeader">标题|时间选择|维度选择</div>
-                        <div class="Wj tzb">
-                            <div id="ID-tab">
-                                <div>
-                                    <div id="ID-intelligenceFlow-visitsFlow">
-                                        <div class="ID-segmentInfo cwb"></div>
-                                        <div class="ID-fixedContainer vub">
-                                            <div class="J4">
-                                                <div id="ID-scrollContainer" class="ID-scrollContainer n7">
-                                                    <div id="ID-flowHeader">
-                                                        <div class="Dvb">
-                                                            <table class="ID-flowHeaderElement qo"
-                                                                   style="margin-left:100px">
-                                                                <tbody>
-                                                                <tr>
-                                                                    <th width="280">
-                                                                        <div class="ID-dimension ACTION-showDimensionPicker TARGET- yd tg Br">
-                                                                            国家/地区
-                                                                        </div>
-                                                                        <div class="ID-dimension-details ACTION-showDimensionDetails TARGET- uB">
-                                                                            <div class="XO"></div>
-                                                                        </div>
-                                                                    </th>
-                                                                    <th width="280">
-                                                                        <div class="nB">起始网页</div>
-                                                                        <div class="ttb">在 35.4K 次访问中，有 19.1K 次访问者中途离开
-                                                                        </div>
-                                                                    </th>
-                                                                </tr>
-                                                            </table>
-                                                            </tbody>
-                                                        </div>
-                                                    </div>
-                                                    <div id = "sdflow" class="ID-svcGraph D0">
-                                                        <p id="chart">
+<div class="container-fluid" style="background:0 90px no-repeat;">
+    <div class="row-fluid">
+        <div class="hiddenleft">
+        </div>
+        <!-- 第一层左边菜单end -->
 
-                                                        <div id="ID-hint" class="ID-hint ABb" style="height:138px;width:243px;display:block;">
-                                                        </div>
-                                                    <!--div的标签-->
+        <div id="content" class="span10 box" style="float:left;width:87.6%;overflow:hidden;margin:0;">
+            <div style="height:56px;">
+                <h2>访问者流 ——昨日采样数据</h2>
+            </div>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+            <!--  visits flow -->
+
+            <!-- 访问流载体 -->
+            <div id="ID-intelligenceFlow-visitsFlow">
+                <!-- 进度条 -->
+                <div id="ID-scrollContainer" class="ID-scrollContainer">
+                </div>
+                <div class="Wd" onselectstart="return false;">
+                    <span class="TARGET-left"><div><</div></span>
+                    <span class="TARGET-right"><div>></div></span>
+                    <span class="TARGET"><div></div></span>
+
+                    <div class="TARGET-up"> +</div>
+                    <div class="ID-slider" role="slider" aria-valuemin="10" aria-valuemax="100" aria-valuenow="0"
+                         tabindex="0">
+                        <div class="slider-bar"></div>
+                        <div class="slider-thumb" style="top: 110px; left: 0px;">
                         </div>
                     </div>
+                    <div class="TARGET-down">-</div>
+                </div>
+                <div id="ID-hint" class="ID-hint ABb" style="display:none;">
+                </div>
+                <div class="ID-flowNodeMenu" id="flowNodeMenu">
+                    <div class="ACTION-highlightNode" role="menuitem" id="highlightNode">突出显示途径此处的流量</div>
+                    <div class="ACTION-showNodeDetails" role="menuitem" id="showNodeDetails">群组详细信息</div>
+                </div>
+                <div class="labelforflow" id="labelforflow" style="left:100px;top:100px;display: none">
+                    <div class="labelforflowhead">
+                        <span class="labelforflowheadtitle" id="labelforflowheadtitle"></span>
+                        <span class="labelforflowheadclose" id="labelforflowheadclose"></span>
+                    </div>
+                    <div class="labelforflowbody" id="labelforflowbody">
+                        <div id="labelforflowbody1"></div>
+                        <div id="labelforflowbody2"></div>
+                        <div id="labelforflowbody3"></div>
+                        <div class="labelforflowbody4" id="labelforflowbody4">
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </div>
     </div>
-</div>
-<!--
-<div>
-    <div id="test1" style="background-color:red;width:200px;height:200px;float:left"></div>
-    <div id="test2" style="background-color:green;width:200px;height:200px;float:left"></div>
-    <div id="test2" style="background-color:yellow;width:200px;height:200px;float:left"></div>
-    <div id="test2" style="background-color:blue;width:200px;height:200px;float:left"></div>
-</div>
--->
-<div>
-
+    <!-- 第二层主内容框架end -->
 </div>
 </body>
-<script src="../gflow.js"></script>
-<script>
-    /*
-     function display() {
-     alert("你点到我啦！")
-     }
-
-
-     function man(){
-     var temp = document.getElementById("test1");
-     this.name = temp;
-     this.showName = function(){console.log("gg");}
-     }
-     function woman(){}
-     var a = new man();
-     var b = new woman();
-     a.showName.call(b,",");*/
+<script type="text/javascript">
+    gflow();
+    $("#content_visitflow").css({"font-weight": "bold", "color": "#000"});
 </script>
 </html>

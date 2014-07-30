@@ -1,0 +1,747 @@
+
+#ID-intelligenceFlow-visitsFlow{
+    -webkit-user-select: none;
+}
+
+.wA {
+    height: auto;
+    overflow: hidden;
+    width: auto;
+}
+
+.uK {
+    min-width: 760px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.p0 {
+    width: 100%
+}
+
+.qz {
+    min-width: 600px;
+    padding: 0;
+    background: #fff;
+    vertical-align: top;
+    width: 100%;
+}
+
+.Zj {
+    min-height: 300px;
+    background-color: #fff;
+}
+
+.ds {
+    margin: 0;
+    min-height: 500px;
+    min-width: 99%;
+}
+
+.cwb {
+    color: #999;
+    margin: -left : 8 px;
+    display: block;
+}
+
+.vub {
+    display: block;
+    position: relative;
+    -webkit-user-select: none;
+}
+
+.Dvb {
+    margin-top: 20px;
+    margin-bottom:10px;
+}
+
+.qo {
+    font-size: 12px;
+    border: none;
+}
+
+.qo .yd {
+    width: 147px;
+    text-align: left;
+    margin: 0;
+    color: white;
+}
+
+.yd.tg {
+    background-color: #9db675;
+    border-color: #6b7d4b;
+}
+
+.yd {
+    border-style: solid;
+    border-width: 1px;
+    background: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 3px 5px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+}
+
+.Br {
+    float: left;
+    margin: 0 5px;
+    width: 208px;
+}
+
+.qo .uB {
+    cursor: pointer;
+    height: 20px;
+    left: 165px;
+    position: relative;
+    width: 20px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    background-color: #9db675;
+}
+
+.qo th {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.XO {
+    background-image: url(../img/gear_dim.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f7f7f7;
+    height: 20px;
+    width: 20px;
+}
+
+.nB {
+    color: #333;
+    position: relative;
+    text-align: left;
+}
+
+.ttb {
+    color: #777;
+    padding-top: 3px;
+    text-align: left;
+}
+
+.D0 {
+    margin-top: -7px;
+    position: relative;
+    margin-left: 100px;
+
+}
+
+.delSpan {
+    background: no-repeat url(../img/visitsflow.png) -1176px -133px;
+    display: inline-block;
+    height: 12px;
+    left: 25px;
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    width: 12px;
+    cursor: pointer;
+    color: #005c9c;
+}
+
+/*这个作为第一次进入页面的class的css*/
+.GU {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 0px 2px 2px #ccc;
+    box-shadow: 0px, 2px, 2px, #ccc;
+    position: absolute;
+}
+
+.ID-scrollContainer {
+    margin: 1px 1px 1px 1px;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+    display: block;
+    overflow: hidden;
+    left: 2px;
+    background: #f7f7f7;
+    box-shadow: inset 2px 3px 10px rgba(0, 0, 0, .4);
+    width: 4300px;
+}
+
+.gflow-th {
+    width: 300px;
+    position:relative;
+}
+
+.node0 rect {
+    cursor: point;
+    fill-opacity: 0.2;
+    shape-rendering: crispEdges;
+    width: 187px;
+    background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+
+}
+
+.link {
+    fill: #D1DFE0;
+    stroke: #D1DFE0;
+    fill-opacity: 0.8;
+    stroke-width: 0.8px;
+    cursor: pointer;
+    display: none;
+}
+
+.link2 {
+    fill: #88a4a4;
+    stroke: #88a4a4;
+    fill-opacity: 1;
+    stroke-width: 1px;
+    cursor: pointer;
+}
+
+.link:hover {
+    stroke-opacity: 1;
+}
+
+.node0 {
+    fill: #FFF;
+    font-family: Arial;
+    font-size: 12px;
+    position: absolute;
+
+}
+
+.node1 {
+    fill: #FFF;
+    font-family: Arial;
+    font-size: 12px;
+    position: absolute;
+}
+
+.node2 {
+    fill: #99d370;
+}
+
+.node0 text {
+    pointer-events: none;
+    size: 30px;
+    width: 187px;
+    font-family: verdana;
+    font-size: 30px;
+}
+
+.Ukb {
+    cursor: pointer;
+    position: absolute;
+}
+
+.VU {
+    border-color: rgb(209, 223, 224);
+    background-image: -webkit-linear-gradient(top, rgb(217, 238, 201), rgb(133, 202, 84));
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    -moz-box-shadow: 0px 2px 2px #ccc;
+    -webkit-box-shadow: 0px 2px 2px #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=\000027#CCCCCC\000027)";
+    filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=\000027#CCCCCC\000027)";
+    position: absolute;
+
+    opacity: 1;
+}
+
+.VUH {
+    border-color: rgb(209, 223, 224);
+    background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(255, 255, 255));
+
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    -moz-box-shadow: 0px 2px 2px #ccc;
+    -webkit-box-shadow: 0px 2px 2px #ccc;
+    box-shadow: 0px 2px 2px #ccc;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=\000027#CCCCCC\000027)";
+    filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=\000027#CCCCCC\000027)";
+    position: absolute;
+}
+
+.z6 {
+    background: no-repeat url(../img/visitsflow.png) -767px -188px;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+
+}
+
+.IU {
+    background: no-repeat url(../img/visitsflow.png) -542px -124px;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+}
+
+.out {
+    position: absolute;
+    background-color: rgb(236, 85, 64);
+    -webkit-print-color-adjust: exact;
+    left: 1000px;
+    top: 100px;
+    width: 16px;
+    height: 180px;
+    border-top-right-radius: 16px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.out1 {
+    position: absolute;
+    background-image: -webkit-linear-gradient(top, rgb(236, 85, 64), rgba(236, 85, 64, 0));
+    -webkit-print-color-adjust: exact;
+    left: 1000px;
+    top: 280px;
+    width: 16px;
+    height: 15px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.out2 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    left: 0px;
+    top: 83.5px;
+    width: 16px;
+    height: 20px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.QNb {
+    font-family: Arial;
+    font-size: 12px;
+    left: 29px;
+    padding-left: 3px;
+    padding-top: 2px;
+    position: absolute;
+    top: 8px;
+    white-space: nowrap;
+    color: #555555;
+    font-weight: bold;
+}
+
+.WS {
+    font-weight: bold;
+    color: #555555;
+    position: absolute;
+}
+
+.ID-hint {
+    position: fixed;
+    padding: 5px;
+    text-align: left;
+    font-family: arial, sans-serif;
+    color: #333;
+    font-size: 13px;
+    background-color: #fff;
+    border-style: solid;
+    border-top-color: #ccc;
+    border-left-color: #ccc;
+    border-right-color: #ccc;
+    border-bottom-color: #ccc;
+    border-width: 2px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    z-index: 999;
+}
+
+.Td .Zb {
+    color: #333;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+
+.Td .Cc {
+    position: relative;
+}
+
+.Td .Cc .CJ {
+    background-color: none;
+    vertical-align: middle;
+    width: 60px;
+    display: inline-block;
+    position: relative;
+    margin-top: -14px;
+}
+
+.Td .Cc .KD {
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Td .Cc .jL {
+    margin-top: 7px;
+    font-weight: bold;
+    border-collapse: collapse;
+}
+
+
+
+.Td .Cc .Sq {
+    padding-bottom: 7px;
+    border-bottom: 2px solid #ccc;
+}
+
+.a-i {
+    background: #fff;
+    border-color: #ccc #666 #666 #ccc;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    font: normal 13px Arial, sans-serif;
+    margin: 0;
+    outline: none;
+    padding: 4px 0;
+    position: absolute;
+    z-index: 20000;
+}
+
+.WJb {
+    position: fixed !important;
+    width: 230px;
+}
+
+.a-F {
+    color: #000;
+    font: normal 13px Arial, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 4px 7em 4px 28px;
+    white-space: nowrap;
+}
+
+#ID-scrollContainer {
+    z-index: 888;
+}
+
+.Wd {
+    position: absolute;
+    left: 20px;
+    top: 60px;
+    margin: 50px;
+    cursor: pointer;
+    background: #fff;
+    width: 5px;
+}
+
+.Wd .TARGET-left {
+    color: #555;
+    border-color: #ccc;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 0;
+    border-left-width: 1px;
+    border-radius: 25px 0 0 25px;
+    -moz-border-radius: 25px 0 0 25px;
+    -webkit-border-radius: 25px 0 0 25px;
+    box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    width: 25px;
+    height: 50px;
+    margin: 0;
+    background: #fff;
+
+}
+
+.Wd .TARGET-left div {
+    position: absolute;
+    left: 3px;
+    top: 14px;
+    font-size: 105%;
+}
+
+.Wd .TARGET-right {
+    color: #555;
+    border-color: #ccc;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 0;
+    border-radius: 0 25px 25px 0;
+    -moz-border-radius: 0 25px 25px 0;
+    -webkit-border-radius: 0 25px 25px 0;
+    box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 50px;
+    margin: 0;
+    background: #fff;
+
+}
+
+.Wd .TARGET-right div {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    font-size: 105%;
+}
+
+.Wd .TARGET {
+    background: no-repeat url(../img/visitsflow.png) -1327px -416px;
+
+    height: 14px;
+    width: 14px;
+    vertical-align: middle;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.Wd .TARGET-up {
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    right: 13px;
+    top: 62px;
+    width: 20px;
+    height: 16px;
+    margin: 0;
+    background: #fff;
+    font-size: 120%;
+}
+
+.Wd .ID-slider {
+    position: absolute;
+    top: 79px;
+    right: 12px;
+    width: 23px;
+    height: 127px;
+    margin: 0;
+}
+
+.Wd .slider-bar {
+    background: #fff;
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 5px;
+    height: 122px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 1px 1px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 1px 1px rgba(0, 0, 0, .25);
+}
+
+.ID-slider .slider-thumb {
+    height: 20px;
+    width: 100%;
+}
+
+.Wd .slider-thumb div {
+    background: #fff;
+    height: 10px;
+    left: 1px;
+    border: 1px solid #ccc;
+    border-width: 1px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+.Wd .slider-thumb {
+    background: none;
+}
+
+.slider-thumb {
+    background: no-repeat url(../img/visitsflow.png) -808px -30px;
+    height: 12px;
+    width: 10px;
+    position: absolute;
+    overflow: hidden;
+    font-size: 65%;
+    text-align: center;
+    color: #999;
+    padding: 0;
+}
+
+.Wd .TARGET-down {
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    -webkit-box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 2px 2px rgba(0, 0, 0, .25);
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    right: 13px;
+    top: 202px;
+    width: 20px;
+    height: 16px;
+    margin: 0;
+    background: #fff;
+    font-size: 120%;
+}
+.addlevel{
+    background:no-repeat url(../img/040.png);
+    position:relative;
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    color: #999;
+    padding: 0;
+    cursor:pointer;
+}
+.ID-flowNodeMenu{
+    background: #fff;
+    border-color: #ccc #666 #666 #ccc;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    font: normal 13px Arial,sans-serif;
+    margin: 0;
+    outline: none;
+    padding: 4px 0;
+    position: absolute;
+    z-index: 20000;
+    width:230px;
+}
+
+.ACTION-highlightNode{
+    color: #000;
+    font: normal 13px Arial,sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 4px 7em 4px 28px;
+    white-space: nowrap;
+}
+.ACTION-showNodeDetails{
+    color: #000;
+    font: normal 13px Arial,sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 4px 7em 4px 28px;
+    white-space: nowrap;
+}
+.labelforflow{
+    background: #666;
+    box-shadow: 0 0 10px 2px #999999;
+    -moz-box-shadow: 0 0 10px 2px #999999;
+    -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+    font: normal 13px Arial;
+    padding: 4px;
+    position: absolute;
+    text-align: left;
+    width: 700px;
+    z-index: 21;
+}
+.labelforflowhead{
+    background-color: #e6e6e6;
+    background-image: -moz-linear-gradient(center bottom,rgb(214,214,214) 0%,rgb(255,255,255) 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0,rgb(208,208,208)),color-stop(1,rgb(244,244,244)));
+    border-bottom: 1px solid #bbb;
+    color: #333;
+    cursor: pointer;
+    font-size: 110%;
+    font-weight: bold;
+    padding: 8px 15px 8px 10px;
+    position: relative;
+    vertical-align: middle;
+}
+.labelforflowbody{
+    background-color: #fff;
+    height: 400px;
+    overflow: auto;
+    padding: 10px;
+}
+.labelforflowheadclose{
+    background: url('../img/close_panel.gif') no-repeat 50% 50%;
+    border-left: 1px solid #bbb;
+    cursor: pointer;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+}
+.GAecflow{
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 10px;
+    table-layout: fixed;
+}
+.GAecflowodd{
+    background-color: #efefef;
+    font-size: 13px;
+    overflow: hidden;
+
+}
+.GAecfloweven{
+    font-size: 13px;
+    overflow: hidden;
+
+}
+.galaxyflow{
+    color: #005c9c;
+}
+._flowimg{
+    background: no-repeat url(../img/spritesflow.png) -1169px -276px;
+    height: 13px;
+    margin-left: 5px;
+    width: 13px;
+}
+._Gag{
+    cursor: pointer;
+    color:#005c9c;
+}
