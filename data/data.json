@@ -5,149 +5,149 @@
         "number": 0
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/news.asp|1",
+        "name": "http:\/\/test.com\/load\/news.asp|1",
         "level": 2,
         "number": 1,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/news.asp",
+                "url": "http:\/\/test.com\/load\/news.asp",
                 "value": 428903
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm|2",
+        "name": "http:\/\/test.com\/load\/image_pic.htm|2",
         "level": 2,
         "number": 2,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm",
+                "url": "http:\/\/test.com\/load\/image_pic.htm",
                 "value": 369561
             },
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm?t=1406588979421",
+                "url": "http:\/\/test.com\/load\/image_pic.htm?t=1406588979421",
                 "value": 1
             },
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm?t=1406596602781",
+                "url": "http:\/\/test.com\/load\/image_pic.htm?t=1406596602781",
                 "value": 1
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/top_banner.asp|3",
+        "name": "http:\/\/test.com\/load\/top_banner.asp|3",
         "level": 2,
         "number": 3,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/top_banner.asp",
+                "url": "http:\/\/test.com\/load\/top_banner.asp",
                 "value": 353926
             },
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/top_banner.asp?t=1406628950286",
+                "url": "http:\/\/test.com\/load\/top_banner.asp?t=1406628950286",
                 "value": 1
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/banner_right.asp|4",
+        "name": "http:\/\/test.com\/load\/banner_right.asp|4",
         "level": 2,
         "number": 4,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/banner_right.asp",
+                "url": "http:\/\/test.com\/load\/banner_right.asp",
                 "value": 300545
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/banner_left.asp|5",
+        "name": "http:\/\/test.com\/load\/banner_left.asp|5",
         "level": 2,
         "number": 5,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/banner_left.asp",
+                "url": "http:\/\/test.com\/load\/banner_left.asp",
                 "value": 99417
             },
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/banner_left.asp?",
+                "url": "http:\/\/test.com\/load\/banner_left.asp?",
                 "value": 1
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm|6",
+        "name": "http:\/\/test.com\/load\/image_pic.htm|6",
         "level": 3,
         "number": 6,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm",
+                "url": "http:\/\/test.com\/load\/image_pic.htm",
                 "value": 5
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm|7",
+        "name": "http:\/\/test.com\/load\/image_pic.htm|7",
         "level": 4,
         "number": 7,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm",
+                "url": "http:\/\/test.com\/load\/image_pic.htm",
                 "value": 3
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm|8",
+        "name": "http:\/\/test.com\/load\/image_pic.htm|8",
         "level": 5,
         "number": 8,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm",
+                "url": "http:\/\/test.com\/load\/image_pic.htm",
                 "value": 2
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm|9",
+        "name": "http:\/\/test.com\/load\/image_pic.htm|9",
         "level": 6,
         "number": 9,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm",
+                "url": "http:\/\/test.com\/load\/image_pic.htm",
                 "value": 2
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm|10",
+        "name": "http:\/\/test.com\/load\/image_pic.htm|10",
         "level": 7,
         "number": 10,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm",
+                "url": "http:\/\/test.com\/load\/image_pic.htm",
                 "value": 1
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm|11",
+        "name": "http:\/\/test.com\/load\/image_pic.htm|11",
         "level": 8,
         "number": 11,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm",
+                "url": "http:\/\/test.com\/load\/image_pic.htm",
                 "value": 1
             }
         ]
     },
     {
-        "name": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm|12",
+        "name": "http:\/\/test.com\/load\/image_pic.htm|12",
         "level": 9,
         "number": 12,
         "child": [
             {
-                "url": "http:\/\/home.bnb.sdo.com\/load\/image_pic.htm",
+                "url": "http:\/\/test.com\/load\/image_pic.htm",
                 "value": 1
             }
         ]
